@@ -1,10 +1,12 @@
 const rawImages = {
   en: {
+    hero2: "assets/imgs/hero2-en.png",
     translation: "assets/imgs/Translate.gif",
     summarize: "assets/imgs/Summarize.gif",
     communication: "assets/imgs/Email.gif",
   },
   vi: {
+    hero2: "assets/imgs/hero2-vi.png",
     translation: "assets/imgs/Gif_trans.gif",
     summarize: "assets/imgs/Gif_sum.gif",
     communication: "assets/imgs/Gif_mail.gif",
@@ -192,6 +194,7 @@ function changeLanguage() {
   document.getElementById("translation").src = selectedImages.translation;
   document.getElementById("summarize").src = selectedImages.summarize;
   document.getElementById("communication").src = selectedImages.communication;
+  document.getElementById("hero2").src = selectedImages.hero2;
 }
 
 // Set default language
