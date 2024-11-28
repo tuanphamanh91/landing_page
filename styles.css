@@ -20,7 +20,7 @@ body {
     /* max-width: 1200px; */
     margin: 0 auto;
     /* padding: 0 20px; */
-    padding: 16px 40px;
+    padding: 16px 140px;
 }
 
 section {
@@ -100,13 +100,31 @@ section {
 
 
 .hero-img {
-    width: 50%;
+    margin-top: 100px;
+    width: 60%;
+    position: relative;
+}
+
+.hero-img-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    object-fit: contain; /* Đảm bảo giữ tỷ lệ của ảnh */
+}
+
+.hero-img-image.active {
+    opacity: 1;
 }
 
 .download {
     font-weight: bold;
-    margin-top: 0px;
+    margin-top: 20px;
     font-size: 19px;
+
 }
 
 .horizontal {
@@ -156,9 +174,22 @@ section {
 
 .features-grid {
     display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 40px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.advantages-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     text-align: center;
+    margin-top: 100px;
+}
+
+.feature-img {
+    width: 70%;
 }
 
 .feature-card {
@@ -176,6 +207,12 @@ section {
     padding-left: 12%;
     padding-right: 12%;
     text-align: center;
+}
+
+.feature-card-img {
+    /* width: 140%;
+    margin-left: -20%; */
+    object-fit: contain; /* Đảm bảo giữ tỷ lệ của ảnh */
 }
 
 .advantages {
@@ -286,14 +323,14 @@ section {
 }
 
 .placeholder-image {
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
     border-radius: 8px;
     width: 100%;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
+    /* color: #666; */
 }
 
 .placeholder-view {
@@ -306,8 +343,25 @@ section {
     color: #666;
     padding: 16px;
     padding-top: 80px;
+}
 
+.footer-img {
+    position: relative;
+}
 
+.footer-img-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    object-fit: contain; /* Đảm bảo giữ tỷ lệ của ảnh */
+}
+
+.footer-img-image.active {
+    opacity: 1;
 }
 
 @media (max-width: 768px) {

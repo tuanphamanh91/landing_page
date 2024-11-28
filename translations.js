@@ -184,3 +184,22 @@ window.onload = function () {
   }
   changeLanguage();
 };
+
+const images = document.querySelectorAll(".hero-img-image");
+let currentIndex = 0;
+
+setInterval(() => {  
+  images[currentIndex].classList.remove("active");
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].classList.add("active");
+
+}, 6000);
+
+const footerImages = document.querySelectorAll(".footer-img-image");
+let currentFooterIndex = 0;
+
+setInterval(() => {
+  footerImages[currentFooterIndex].classList.remove("active");
+  currentFooterIndex = (currentFooterIndex + 1) % footerImages.length;
+  footerImages[currentFooterIndex].classList.add("active");
+}, 3000);
