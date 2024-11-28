@@ -194,12 +194,3 @@ setInterval(() => {
   images[currentIndex].classList.add("active");
 
 }, 6000);
-
-const footerImages = document.querySelectorAll(".footer-img-image");
-let currentFooterIndex = 0;
-
-setInterval(() => {
-  footerImages[currentFooterIndex].classList.remove("active");
-  currentFooterIndex = (currentFooterIndex + 1) % footerImages.length;
-  footerImages[currentFooterIndex].classList.add("active");
-}, 3000);
