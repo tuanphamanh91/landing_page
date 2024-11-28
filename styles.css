@@ -20,7 +20,7 @@ body {
     /* max-width: 1200px; */
     margin: 0 auto;
     /* padding: 0 20px; */
-    padding: 16px 140px;
+    padding: 16px 60px;
 }
 
 section {
@@ -101,6 +101,7 @@ section {
 
 .hero-img {
     margin-top: 100px;
+    margin-left: 30px;
     width: 60%;
     position: relative;
 }

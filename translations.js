@@ -1,3 +1,16 @@
+const rawImages = {
+  en: {
+    translation: "assets/imgs/Translate.gif",
+    summarize: "assets/imgs/Summarize.gif",
+    communication: "assets/imgs/Email.gif",
+  },
+  vi: {
+    translation: "assets/imgs/Gif_trans.gif",
+    summarize: "assets/imgs/Gif_sum.gif",
+    communication: "assets/imgs/Gif_mail.gif",
+  },
+};
+
 const translations = {
   en: {
     brand: "AI SHORTCUT",
@@ -171,6 +184,14 @@ function changeLanguage() {
       element.textContent = translation;
     }
   });
+
+  // Lấy các ảnh tương ứng với ngôn ngữ
+  const selectedImages = rawImages[lang];
+
+  // Thay đổi src của các ảnh
+  document.getElementById("translation").src = selectedImages.translation;
+  document.getElementById("summarize").src = selectedImages.summarize;
+  document.getElementById("communication").src = selectedImages.communication;
 }
 
 // Set default language
@@ -188,9 +209,8 @@ window.onload = function () {
 const images = document.querySelectorAll(".hero-img-image");
 let currentIndex = 0;
 
-setInterval(() => {  
+setInterval(() => {
   images[currentIndex].classList.remove("active");
   currentIndex = (currentIndex + 1) % images.length;
   images[currentIndex].classList.add("active");
-
 }, 6000);
