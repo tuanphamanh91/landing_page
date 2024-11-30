@@ -85,7 +85,7 @@ section {
 .hero-text-2 {
     font-style: italic;      /* Đặt chữ nghiêng */
     font-weight: bold;       /* Đặt chữ đậm */
-    margin-top: 80px;
+    margin-top: 30px;
     font-size: 19px;
 }
 
@@ -96,6 +96,10 @@ section {
     font-family: 'Montserrat', sans-serif;
     padding-right: 40px;
     margin-top: 10px;
+}
+
+.how_it_works {
+    margin-top: 60px;
 }
 
 
@@ -123,7 +127,7 @@ section {
 
 .download {
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 19px;
 
 }

@@ -4,12 +4,14 @@ const rawImages = {
     translation: "assets/imgs/Translate.gif",
     summarize: "assets/imgs/Summarize.gif",
     communication: "assets/imgs/Email.gif",
+    english: "assets/imgs/Analyze.gif",
   },
   vi: {
     hero2: "assets/imgs/hero2-vi.png",
     translation: "assets/imgs/Gif_trans.gif",
     summarize: "assets/imgs/Gif_sum.gif",
     communication: "assets/imgs/Gif_mail.gif",
+    english: "assets/imgs/Gif_gram.gif",
   },
 };
 
@@ -21,6 +23,7 @@ const translations = {
       slogan: "Quick translation with one shortcut",
       description:
         "Effortlessly translate, rewrite, communicate, and summarize documents using the power of AI.",
+      how_it_works: "Set up shortcuts for commonly used prompts (e.g., translation, rewriting, summarizing, chatting, etc.), then select the text you want the AI to process and press the shortcut.",
       cta: "Download for free now!",
       download_mac: "Get it on MAC APP STORE",
       download_windows: "Available at MICROSOFT",
@@ -41,6 +44,11 @@ const translations = {
         title: "Summarize",
         description:
           "Capture key points from documents in seconds, focusing only on the most important details.",
+      },
+      learn_english: {
+        title: "Learn English",
+        description:
+          "Improve your English skills with AI.",
       },
     },
     advantages: {
@@ -97,6 +105,7 @@ const translations = {
       slogan: "Dịch tức thì với một phím tắt",
       description:
         "Dễ dàng dịch thuật, viết lại, trò chuyện và tóm tắt tài liệu với sức mạnh của AI.",
+      how_it_works: "Cài đặt phím tắt cho các prompt thường dùng (ví dụ: dịch thuật, viết lại, tóm tắt, trò chuyện, ...), sau đó chọn văn bản cần AI xử lý và ấn phím tắt.",
       cta: "Tải về miễn phí ngay!",
       download_mac: "Tải trên MAC APP STORE",
       download_windows: "Có sẵn trên MICROSOFT",
@@ -117,6 +126,11 @@ const translations = {
         title: "Tóm tắt",
         description:
           "Tóm tắt tài liệu chỉ trong vài giây, tập trung vào những điều quan trọng nhất.",
+      },
+      learn_english: {
+        title: "Học tiếng Anh",
+        description:
+          "Nâng cao kỹ năng tiếng Anh với AI.",
       },
     },
     advantages: {
@@ -194,6 +208,7 @@ function changeLanguage() {
   document.getElementById("translation").src = selectedImages.translation;
   document.getElementById("summarize").src = selectedImages.summarize;
   document.getElementById("communication").src = selectedImages.communication;
+  document.getElementById("english").src = selectedImages.english;
   document.getElementById("hero2").src = selectedImages.hero2;
 }
 
