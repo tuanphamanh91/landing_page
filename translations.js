@@ -96,6 +96,7 @@ const translations = {
       footer:
         "Experience a streamlined, straightforward workflow focused on what matters most — empowering you to grow both your career and yourself efficiently.",
       free_download: "Download for free now!",
+      join_fb: "Join Facebook"
     },
   },
   vi: {
@@ -179,6 +180,7 @@ const translations = {
       footer:
         "Trải nghiệm một quy trình làm việc đơn giản và mượt mà, tập trung vào những gì quan trọng nhất cùng AI Shortcut – Giải pháp tối ưu hiệu quả cho công việc và sự phát triển của bạn.",
       free_download: "Tải về miễn phí",
+      join_fb: "Tham gia nhóm facebook"
     },
   },
 };
@@ -232,3 +234,13 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % images.length;
   images[currentIndex].classList.add("active");
 }, 6000);
+
+document.getElementById("download-mac").addEventListener("click", function(event) {
+  console.log("download-mac")
+  gtag("event", "download-mac");
+});
+
+document.getElementById("download-win").addEventListener("click", function(event) {
+  console.log("download-win")
+  gtag("event", "download-win");
+});
