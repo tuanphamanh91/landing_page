@@ -306,6 +306,15 @@ section {
     gap: 30px;
 }
 
+/* Adjust grid columns based on language */
+html[lang="en"] .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+html[lang="vi"] .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .footer-logo {
     width: 40px;
 }
@@ -325,6 +334,11 @@ section {
 .footer-links a {
     color: #666;
     text-decoration: none;
+}
+
+/* Vietnamese-only elements */
+.vi-only {
+    display: none; /* Hidden by default */
 }
 
 .placeholder-image {

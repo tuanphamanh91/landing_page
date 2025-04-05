@@ -105,6 +105,12 @@ const translations = {
       free_download: "Download for free now!",
       join_fb: "Join Facebook"
     },
+    footer: {
+      communication: {
+        title: "Communication",
+        join: "Join Communication"
+      }
+    }
   },
   vi: {
     brand: "AI SHORTCUT",
@@ -194,6 +200,12 @@ const translations = {
       free_download: "Tải về miễn phí",
       join_fb: "Tham gia nhóm facebook"
     },
+    footer: {
+      communication: {
+        title: "Communication",
+        join: "Tham gia nhóm facebook"
+      }
+    }
   },
 };
 
@@ -207,12 +219,20 @@ function changeLanguage() {
   const lang = document.getElementById("langSelect").value;
   const texts = translations[lang];
 
+  // Set the HTML lang attribute
+  document.documentElement.lang = lang;
+
   document.querySelectorAll(".translate").forEach((element) => {
     const key = element.getAttribute("data-key");
     const translation = getNestedTranslation(texts, key);
     if (translation) {
       element.textContent = translation;
     }
+  });
+
+  // Handle visibility of Vietnamese-only elements
+  document.querySelectorAll(".vi-only").forEach((element) => {
+    element.style.display = lang === "vi" ? "block" : "none";
   });
 
   // Lấy các ảnh tương ứng với ngôn ngữ
