@@ -20,6 +20,9 @@ const rawImages = {
 const translations = {
   en: {
     brand: "AI SHORTCUT",
+    header: {
+      premium: "Upgrade to Premium"
+    },
     hero: {
       tagline: "More simple - More focus",
       slogan: "Quick translation with one shortcut",
@@ -114,6 +117,9 @@ const translations = {
   },
   vi: {
     brand: "AI SHORTCUT",
+    header: {
+      premium: "Nâng cấp Premium"
+    },
     hero: {
       tagline: "Dễ dàng hơn - Tập trung hơn",
       slogan: "Dịch tức thì với một phím tắt",

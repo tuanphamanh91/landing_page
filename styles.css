@@ -30,8 +30,9 @@ section {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20 30px;
+    padding: 20px 30px;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -58,7 +59,11 @@ section {
     border-radius: 20px;
     background: #f5f5f5;
     cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 20px;
 }
+
 .borderless-select {
     border: none;
     outline: none; /* Remove outline when focused */
@@ -382,4 +387,27 @@ section {
     .store-buttons {
         flex-direction: column;
     }
+}
+
+.premium-button {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 180px;
+    top: 20px;
+}
+
+.premium-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.vi-only {
+    display: none;
 }
