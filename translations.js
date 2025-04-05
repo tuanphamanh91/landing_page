@@ -5,6 +5,7 @@ const rawImages = {
     summarize: "assets/imgs/Summarize.gif",
     communication: "assets/imgs/Email.gif",
     english: "assets/imgs/Analyze.gif",
+    customize_prompt: "assets/imgs/CustomPromptEn.gif",
   },
   vi: {
     hero2: "assets/imgs/hero2-vi.png",
@@ -12,6 +13,7 @@ const rawImages = {
     summarize: "assets/imgs/Gif_sum.gif",
     communication: "assets/imgs/Gif_mail.gif",
     english: "assets/imgs/Gif_gram.gif",
+    customize_prompt: "assets/imgs/CustomPromptVi.gif",
   },
 };
 
@@ -49,6 +51,11 @@ const translations = {
         title: "Learn English",
         description:
           "Improve your English skills with AI.",
+      },
+      customize_prompt: {
+        title: "Customize Prompt",
+        description:
+          "Create and customize your own prompts for different scenarios.",
       },
     },
     advantages: {
@@ -133,6 +140,11 @@ const translations = {
         description:
           "Nâng cao kỹ năng tiếng Anh với AI.",
       },
+      customize_prompt: {
+        title: "Tùy chỉnh Prompt",
+        description:
+          "Tạo và tùy chỉnh prompt của riêng bạn cho các tình huống khác nhau.",
+      },
     },
     advantages: {
       title: "Những giá trị bạn nhận được",
@@ -212,6 +224,7 @@ function changeLanguage() {
   document.getElementById("communication").src = selectedImages.communication;
   document.getElementById("english").src = selectedImages.english;
   document.getElementById("hero2").src = selectedImages.hero2;
+  document.getElementById("customize_prompt").src = selectedImages.customize_prompt;
 }
 
 // Set default language
