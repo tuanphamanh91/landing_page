@@ -86,13 +86,13 @@ const translations = {
       interface2: "Intuitive design, easy to understand and use.",
 
       integration1: "Multi-platform integration: ",
-      integration2: "Work with all other applications on your Mac/PC.",
+      integration2: "Work with all other applications on your Mac/PC/iOS device.",
 
       instant1: "Instant results: ",
       instant2: "Complete tasks right where you are, without switching tabs.",
 
       crossPlatform1: "Cross-platform: ",
-      crossPlatform2: "Available on both Windows and macOS.",
+      crossPlatform2: "Available on Windows, macOS and iOS devices.",
 
       shortcuts1: "Personalized shortcuts: ",
       shortcuts2: "Set up shortcuts that fit your workflow.",
@@ -110,6 +110,28 @@ const translations = {
       join_fb: "Join Facebook"
     },
     footer: {
+      tagline: "Boost your productivity with AI",
+      description: "AI Shortcut helps you translate, rewrite, communicate, and summarize documents using the power of AI. Available on Windows, Mac, and iOS devices.",
+      products: {
+        title: "Products",
+        windows: "Windows App",
+        mac: "Mac App",
+        ios: "iOS App"
+      },
+      connect: {
+        title: "Connect",
+        facebook: "Facebook",
+        community: "Community Group"
+      },
+      support: {
+        title: "Support",
+        email: "Email Support",
+        faq: "FAQ",
+        privacy: "Privacy Policy"
+      },
+      terms: "Terms of Service",
+      privacy: "Privacy Policy",
+      about: "About Us",
       communication: {
         title: "Communication",
         join: "Join Communication"
@@ -185,13 +207,13 @@ const translations = {
       interface2: "Thiết kế dễ hiểu, dễ sử dụng.",
 
       integration1: "Tích hợp mọi nền tảng: ",
-      integration2: "Làm việc với tất cả ứng dụng trên máy tính của bạn.",
+      integration2: "Làm việc với tất cả ứng dụng trên máy tính và thiết bị iOS của bạn.",
 
       instant1: "Kết quả tức thì: ",
       instant2: "Mọi thao tác hoàn thành ngay tại vị trí bạn làm việc.",
 
       crossPlatform1: "Đa hệ điều hành: ",
-      crossPlatform2: "Sử dụng cho cả hệ điều hành Windows và MacOS.",
+      crossPlatform2: "Sử dụng cho Windows, MacOS và iOS.",
 
       shortcuts1: "Cá nhân hoá linh hoạt: ",
       shortcuts2: "Tuỳ chỉnh phím tắt theo thói quen của bạn.",
@@ -209,8 +231,30 @@ const translations = {
       join_fb: "Tham gia nhóm facebook"
     },
     footer: {
+      tagline: "Tăng năng suất làm việc với AI",
+      description: "AI Shortcut giúp bạn dịch thuật, viết lại, trò chuyện và tóm tắt tài liệu với sức mạnh của AI. Có sẵn trên Windows, Mac và thiết bị iOS.",
+      products: {
+        title: "Sản phẩm",
+        windows: "Ứng dụng Windows",
+        mac: "Ứng dụng Mac",
+        ios: "Ứng dụng iOS"
+      },
+      connect: {
+        title: "Kết nối",
+        facebook: "Facebook",
+        community: "Nhóm Cộng đồng"
+      },
+      support: {
+        title: "Hỗ trợ",
+        email: "Hỗ trợ qua Email",
+        faq: "Câu hỏi thường gặp",
+        privacy: "Chính sách bảo mật"
+      },
+      terms: "Điều khoản sử dụng",
+      privacy: "Chính sách bảo mật",
+      about: "Về chúng tôi",
       communication: {
-        title: "Communication",
+        title: "Cộng đồng",
         join: "Tham gia nhóm facebook"
       }
     }
