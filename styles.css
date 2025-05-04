@@ -160,10 +160,22 @@ section {
     align-items: center;
     gap: 20px;
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     width: 220px;
     flex: 0 0 220px; /* Fixed width, no grow, no shrink */
+    position: relative;
+    overflow: hidden;
+}
+
+.store-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.store-button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .store-button svg {
@@ -176,6 +188,17 @@ section {
 
 .store-button strong {
     font-size: 14px;
+}
+
+.store-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    pointer-events: none;
 }
 
 .microsoft-store, .mac-store {
@@ -398,15 +421,24 @@ section {
 }
 
 @media (max-width: 768px) {
-
-    .features-grid,
-    .advantages-grid,
-    .why-it-works,
-    .steps,
-    .footer-content {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 16px 20px;
     }
-
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        width: 100%;
+    }
+    
+    .hero-img {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    
     .store-buttons {
         flex-direction: row;
         flex-wrap: wrap;
@@ -427,14 +459,6 @@ section {
         width: 20px;
         height: 20px;
     }
-
-    .store-button.ios-store {
-        margin-top: 15px;
-        margin-left: 0;
-        position: static;
-        transform: none;
-        left: auto;
-    }
     
     .store-button div {
         font-size: 12px;
@@ -445,46 +469,160 @@ section {
         font-size: 11px;
     }
     
-    .container {
-        padding: 16px 20px;
+    .features-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 60px;
+        gap: 20px;
     }
     
-    .hero-content {
-        flex-direction: column;
-    }
-    
-    .hero-text {
+    .feature-card-img {
         width: 100%;
+        margin: 0 auto;
     }
     
-    .hero-img {
-        width: 100%;
-        margin-left: 0;
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .tagline {
+        font-size: 1.8rem;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2em;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .why-it-works {
+        grid-template-columns: 1fr;
+    }
+    
+    .store-button, 
+    .feature-card,
+    .footer-links a,
+    .language-selector,
+    .premium-button {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+    
+    /* Fix potential text overflow issues */
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    /* Improve font rendering on mobile */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Smoother scrolling for iOS */
+    html {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Mobile-specific touch effects */
+    .store-button:active {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+    
+    /* More visible focus for accessibility */
+    .store-button:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.3);
+        outline-offset: 2px;
     }
 }
 
 @media (max-width: 480px) {
     .store-buttons {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
     }
     
-    .microsoft-store, .mac-store, .ios-store {
-        width: 200px;
-        flex: 0 0 200px;
-        margin-bottom: 10px;
-    }
-    
-    .microsoft-store {
+    .microsoft-store, .mac-store {
+        margin-bottom: 15px;
+        width: 45%;
+        max-width: 160px;
+        flex: 0 0 auto;
+        gap: 10px;
+        padding: 10px 15px;
+        justify-content: flex-start;
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        position: relative;
         order: 1;
     }
     
-    .mac-store {
-        order: 3;
+    .ios-store {
+        margin-bottom: 15px;
+        width: 60%;
+        max-width: 200px;
+        flex: 0 0 auto;
+        gap: 15px;
+        padding: 10px 15px;
+        justify-content: flex-start;
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        position: relative;
+        order: 2;
+        clear: both;
     }
     
-    .ios-store {
-        order: 2;
+    .store-button div {
+        line-height: 1.2;
+        flex: 1;
+        text-align: left;
+    }
+    
+    .store-button strong {
+        display: block;
+        margin-top: 1px;
+    }
+    
+    .store-button svg {
+        margin-right: 5px;
+    }
+    
+    .store-button:active {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+    
+    .store-button:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.3);
+        outline-offset: 2px;
     }
 }
 
@@ -560,4 +698,280 @@ section {
 .microsoft-store {
     background: #5C2D91;
     color: white;
+}
+
+/* iPhone 16 specific (390px width) */
+@media (max-width: 430px) {
+    .header {
+        padding: 15px;
+    }
+    
+    .language-selector {
+        right: 15px;
+        top: 15px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .tagline {
+        font-size: 1.5rem;
+        margin-top: 15px;
+        line-height: 1.3;
+    }
+    
+    .hero-text-2 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .hero-text-3 {
+        font-size: 14px;
+        padding-right: 0;
+    }
+    
+    .download {
+        margin-top: 30px;
+    }
+    
+    .store-button {
+        width: 160px;
+        flex: 0 0 160px;
+        padding: 8px 12px;
+    }
+    
+    .store-buttons {
+        gap: 10px;
+    }
+    
+    .why-it-works {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-img-image {
+        position: relative;
+        left: 0;
+    }
+    
+    .features-list li {
+        gap: 10px;
+    }
+
+    .horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .microsoft-store, .mac-store {
+        padding: 8px 12px;
+        min-height: 50px;
+        width: 42%;
+        /* max-width: 150px; */
+    }
+    
+    .ios-store {
+        padding: 8px 15px;
+        min-height: 50px;
+        width: 60%;
+        max-width: 180px;
+        margin-top: 10px;
+    }
+    
+    .store-button svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .store-button div {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    
+    .store-button strong {
+        font-size: 13px;
+        margin-top: 0;
+    }
+    
+    .microsoft-store svg, .mac-store svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .ios-store svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .microsoft-store div, .mac-store div {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    
+    .ios-store div {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+    
+    .microsoft-store strong, .mac-store strong {
+        font-size: 11px;
+        margin-top: 0;
+    }
+    
+    .ios-store strong {
+        font-size: 12px;
+        margin-top: 0;
+    }
+}
+
+/* iPhone 16 Pro Max specific (430px width) */
+@media (min-width: 431px) and (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+    
+    .language-selector {
+        right: 15px;
+        top: 15px;
+    }
+    
+    .tagline {
+        font-size: 1.7rem;
+    }
+    
+    .store-button {
+        width: 185px;
+        flex: 0 0 185px;
+    }
+    
+    .download {
+        margin-top: 35px;
+    }
+    
+    .why-it-works {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-img-image {
+        position: relative;
+        left: 0;
+    }
+}
+
+/* Extra small device fixes */
+@media (max-width: 360px) {
+    .store-button {
+        width: 140px;
+        flex: 0 0 140px;
+        padding: 6px 10px;
+        gap: 6px;
+    }
+    
+    .tagline {
+        font-size: 1.4rem;
+    }
+    
+    .hero-text-2 {
+        font-size: 14px;
+    }
+    
+    .section-title {
+        font-size: 1.3em;
+    }
+    
+    .microsoft-store, .mac-store {
+        min-height: 45px;
+        width: 45%;
+        max-width: 140px;
+        padding: 7px 10px;
+        gap: 8px;
+    }
+    
+    .ios-store {
+        min-height: 45px;
+        width: 70%;
+        max-width: 160px;
+        padding: 7px 12px;
+        margin-top: 10px;
+    }
+    
+    .store-button svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .store-button div {
+        font-size: 13px;
+        line-height: 1.1;
+    }
+    
+    .store-button strong {
+        font-size: 12px;
+    }
+    
+    .microsoft-store svg, .mac-store svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .ios-store svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .microsoft-store div, .mac-store div {
+        font-size: 11px;
+        line-height: 1.1;
+    }
+    
+    .ios-store div {
+        font-size: 12px;
+        line-height: 1.1;
+    }
+    
+    .microsoft-store strong, .mac-store strong {
+        font-size: 10px;
+    }
+    
+    .ios-store strong {
+        font-size: 11px;
+    }
+}
+
+/* Fix meta viewport for better mobile display */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
+
+/* Fix iOS specific issues */
+@supports (-webkit-touch-callout: none) {
+    .store-buttons {
+        /* Fix for Safari padding/margin issues */
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    /* Fix button appearance on iOS */
+    .store-button {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    /* iOS-specific button tweaks for better appearance */
+    @media (max-width: 480px) {
+        .microsoft-store, .mac-store, .ios-store {
+            /* Slightly more pronounced shadow for iOS */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+        }
+    }
 }
