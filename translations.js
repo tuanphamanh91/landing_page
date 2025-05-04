@@ -15,6 +15,14 @@ const rawImages = {
     english: "assets/imgs/Gif_gram.gif",
     customize_prompt: "assets/imgs/CustomPromptVi.gif",
   },
+  ja: {
+    hero2: "assets/imgs/hero2-en.png",
+    translation: "assets/imgs/Translate.gif",
+    summarize: "assets/imgs/Summarize.gif",
+    communication: "assets/imgs/Email.gif",
+    english: "assets/imgs/Analyze.gif",
+    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+  },
 };
 
 const translations = {
@@ -259,9 +267,130 @@ const translations = {
       }
     }
   },
+  ja: {
+    brand: "AI SHORTCUT",
+    header: {
+      premium: "プレミアムにアップグレード"
+    },
+    hero: {
+      tagline: "よりシンプルに - よりフォーカスに",
+      slogan: "ショートカット一つですばやく翻訳",
+      description:
+        "AIのパワーを使って、簡単に翻訳、書き直し、コミュニケーション、文書の要約ができます。",
+      how_it_works: "よく使うプロンプト（翻訳、書き直し、要約、チャットなど）のショートカットを設定し、AIに処理させたいテキストを選択してショートカットを押すだけです。",
+      cta: "今すぐ無料でダウンロード！",
+      download_mac: "MAC STOREで入手",
+      download_ios: "iOS STOREで入手",
+      download_windows: "MICROSOFTで入手可能",
+    },
+    efficiency: {
+      title: "作業効率の向上",
+      translation: {
+        title: "翻訳",
+        description:
+          "複数の言語を素早く正確に翻訳し、双方向で比較、即座に結果を得られます。",
+      },
+      communication: {
+        title: "コミュニケーション",
+        description:
+          "業界固有の用語やパーソナライズされたトーンを使って、複数言語でのメッセージングやメール作成をサポートします。",
+      },
+      summarize: {
+        title: "要約",
+        description:
+          "数秒で文書の重要なポイントをキャプチャし、最も重要な詳細だけに焦点を当てます。",
+      },
+      learn_english: {
+        title: "英語学習",
+        description:
+          "AIであなたの英語スキルを向上させましょう。",
+      },
+      customize_prompt: {
+        title: "プロンプトのカスタマイズ",
+        description:
+          "さまざまなシナリオ用に独自のプロンプトを作成してカスタマイズできます。",
+      },
+    },
+    advantages: {
+      title: "あなたの優位性を解き放つ",
+      time: {
+        title: "時間の節約",
+        description:
+          "ショートカット一つで素早くタスクを実行し、日常的な作業に費やす時間を大幅に節約できます。",
+      },
+      productivity: {
+        title: "生産性の向上",
+        description:
+          "繰り返しのタスクに邪魔されることなく、コア業務に集中できます。",
+      },
+      relationships: {
+        title: "国際的な関係",
+        description:
+          "どんな言語でも効果的にコミュニケーションを取り、世界的なつながりを強化できます。",
+      },
+    },
+    assistant: {
+      title: "なぜあなたに役立つのか",
+      interface1: "シンプルなインターフェース: ",
+      interface2: "直感的なデザインで理解しやすく使いやすい。",
+
+      integration1: "マルチプラットフォーム統合: ",
+      integration2: "Mac/PC/iOS端末上のすべてのアプリケーションと連携。",
+
+      instant1: "即時結果: ",
+      instant2: "タブを切り替えることなく、今いる場所で直ちにタスクを完了。",
+
+      crossPlatform1: "クロスプラットフォーム: ",
+      crossPlatform2: "Windows、macOS、iOSデバイスで利用可能。",
+
+      shortcuts1: "パーソナライズされたショートカット: ",
+      shortcuts2: "あなたのワークフローに合わせたショートカットを設定。",
+    },
+    steps: {
+      title: "3つの簡単なステップで作業を最適化",
+      step1: "アプリをダウンロード",
+      step2: "ショートカットを設定",
+      step3: "コンテンツを選択してショートカットを押す",
+    },
+    other: {
+      footer:
+        "最も重要なことに焦点を当てた合理的で分かりやすいワークフローを体験 — キャリアと自己成長を効率的に促進します。",
+      free_download: "今すぐ無料でダウンロード！",
+      join_fb: "Facebookに参加"
+    },
+    footer: {
+      tagline: "AIで生産性を向上",
+      description: "AI Shortcutは、AIの力を使って翻訳、書き直し、コミュニケーション、文書の要約を支援します。Windows、Mac、iOSデバイスで利用可能。",
+      products: {
+        title: "製品",
+        windows: "Windowsアプリ",
+        mac: "Macアプリ",
+        ios: "iOSアプリ"
+      },
+      connect: {
+        title: "接続",
+        facebook: "Facebook",
+        community: "コミュニティグループ"
+      },
+      support: {
+        title: "サポート",
+        email: "Eメールサポート",
+        faq: "よくある質問",
+        privacy: "プライバシーポリシー"
+      },
+      terms: "利用規約",
+      privacy: "プライバシーポリシー",
+      about: "私たちについて",
+      communication: {
+        title: "コミュニケーション",
+        join: "コミュニケーションに参加"
+      }
+    }
+  },
 };
 
 function getNestedTranslation(obj, path) {
+  if (!path) return null;
   return path.split(".").reduce((prev, curr) => {
     return prev ? prev[curr] : null;
   }, obj);
@@ -276,9 +405,11 @@ function changeLanguage() {
 
   document.querySelectorAll(".translate").forEach((element) => {
     const key = element.getAttribute("data-key");
-    const translation = getNestedTranslation(texts, key);
-    if (translation) {
-      element.textContent = translation;
+    if (key) {
+      const translation = getNestedTranslation(texts, key);
+      if (translation) {
+        element.textContent = translation;
+      }
     }
   });
 
@@ -287,10 +418,10 @@ function changeLanguage() {
     element.style.display = lang === "vi" ? "block" : "none";
   });
 
-  // Lấy các ảnh tương ứng với ngôn ngữ
-  const selectedImages = rawImages[lang];
+  // Get images for the selected language, fallback to English if not available
+  const selectedImages = rawImages[lang] || rawImages["en"];
 
-  // Thay đổi src của các ảnh
+  // Change image sources
   document.getElementById("translation").src = selectedImages.translation;
   document.getElementById("summarize").src = selectedImages.summarize;
   document.getElementById("communication").src = selectedImages.communication;
@@ -303,9 +434,12 @@ function changeLanguage() {
 window.onload = function () {
   const browserLang = navigator.language || navigator.userLanguage;
   const primaryLang = browserLang.split("-")[0];
+  
+  // Check if the primary language is supported
   if (translations[primaryLang]) {
     document.getElementById("langSelect").value = primaryLang;
   } else {
+    // Handle special case for Japanese variants
     document.getElementById("langSelect").value = "en";
   }
   changeLanguage();
