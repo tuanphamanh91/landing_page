@@ -147,10 +147,14 @@ section {
     gap: 20px;
     margin-top: 10px;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
 }
 
 .store-button {
-    padding: 12px 40px;
+    padding: 12px 20px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -158,21 +162,40 @@ section {
     text-decoration: none;
     transition: transform 0.2s;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    width: 260px;
+    width: 220px;
+    flex: 0 0 220px; /* Fixed width, no grow, no shrink */
 }
 
-.mac-store {
-    background: #f5f5f5;
-    color: #333;
+.store-button svg {
+    flex-shrink: 0;
 }
 
-.microsoft-store {
-    background: #5C2D91;
-    color: white;
+.store-button div {
+    line-height: 1.3;
 }
+
+.store-button strong {
+    font-size: 14px;
+}
+
+.microsoft-store, .mac-store {
+    order: 1; /* Items with lower order values appear first */
+}
+
+.ios-store {
+    order: 2; /* Higher order value means it appears later */
+    margin-top: 15px;
+    margin-left: 0;
+    position: static;
+    transform: none;
+    left: auto;
+    clear: left; /* Ensure it starts on a new line */
+}
+
 .strong {
     font-weight: bold;
 }
+
 .section-title {
     text-align: center;
     font-size: 2em;
@@ -385,7 +408,119 @@ section {
     }
 
     .store-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .store-button {
+        padding: 8px 15px;
+        gap: 8px;
+        width: 170px;
+        flex: 0 0 170px;
+        font-size: 12px;
+        justify-content: flex-start;
+    }
+    
+    .store-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .store-button.ios-store {
+        margin-top: 15px;
+        margin-left: 0;
+        position: static;
+        transform: none;
+        left: auto;
+    }
+    
+    .store-button div {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    
+    .store-button strong {
+        font-size: 11px;
+    }
+    
+    .container {
+        padding: 16px 20px;
+    }
+    
+    .hero-content {
         flex-direction: column;
+    }
+    
+    .hero-text {
+        width: 100%;
+    }
+    
+    .hero-img {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .store-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .microsoft-store, .mac-store, .ios-store {
+        width: 200px;
+        flex: 0 0 200px;
+        margin-bottom: 10px;
+    }
+    
+    .microsoft-store {
+        order: 1;
+    }
+    
+    .mac-store {
+        order: 3;
+    }
+    
+    .ios-store {
+        order: 2;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .store-buttons {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    
+    .store-button {
+        padding: 10px 15px;
+        gap: 10px;
+        width: 180px;
+        flex: 0 0 180px;
+    }
+    
+    .store-button.ios-store {
+        margin-top: 15px;
+        margin-left: 0;
+        position: static;
+        transform: none;
+        left: auto;
+    }
+    
+    .horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1025px) {
+    .store-button {
+        width: 220px;
+        flex: 0 0 220px;
+        padding: 12px 20px;
     }
 }
 
@@ -410,4 +545,19 @@ section {
 
 .vi-only {
     display: none;
+}
+
+.mac-store {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.ios-store {
+    background: #000000;
+    color: white;
+}
+
+.microsoft-store {
+    background: #5C2D91;
+    color: white;
 }

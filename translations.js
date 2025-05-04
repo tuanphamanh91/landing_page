@@ -31,6 +31,7 @@ const translations = {
       how_it_works: "Set up shortcuts for commonly used prompts (e.g., translation, rewriting, summarizing, chatting, etc.), then select the text you want the AI to process and press the shortcut.",
       cta: "Download for free now!",
       download_mac: "Get it on MAC APP STORE",
+      download_ios: "Get it on",
       download_windows: "Available at MICROSOFT",
     },
     efficiency: {
@@ -127,7 +128,8 @@ const translations = {
         "Dễ dàng dịch thuật, viết lại, trò chuyện và tóm tắt tài liệu với sức mạnh của AI.",
       how_it_works: "Cài đặt phím tắt cho các prompt thường dùng (ví dụ: dịch thuật, viết lại, tóm tắt, trò chuyện, ...), sau đó chọn văn bản cần AI xử lý và ấn phím tắt.",
       cta: "Tải về miễn phí ngay!",
-      download_mac: "Tải trên MAC APP STORE",
+      download_mac: "Tải từ MAC OS STORE",
+      download_ios: "Tải trên iOS STORE",
       download_windows: "Có sẵn trên MICROSOFT",
     },
     efficiency: {
@@ -277,6 +279,11 @@ setInterval(() => {
 document.getElementById("download-mac").addEventListener("click", function(event) {
   console.log("download-mac")
   gtag("event", "download-mac");
+});
+
+document.getElementById("download-ios").addEventListener("click", function(event) {
+  console.log("download-ios")
+  gtag("event", "download-ios");
 });
 
 document.getElementById("download-win").addEventListener("click", function(event) {
