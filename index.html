@@ -7,8 +7,10 @@
 	<title>AI Shortcut - Quick translation with one shortcut</title>
 	<link rel="stylesheet" href="./styles.css" />
 	<meta name="description" content="Use AI to translate and rewrite content with just one shortcut.">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-	<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+	<meta name="theme-color" content="#f5ead8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 </head>
@@ -23,320 +25,388 @@
 </script>
 
 <body>
-	<header class="header container">
-		<div class="logo">
-		</div>
+	<header class="site-header">
+		<div class="header-inner">
+			<div class="brand">
+				<img src="assets/playstore.png" alt="AI Shortcut" width="44" height="44">
+				<span>AI SHORTCUT</span>
+			</div>
 
-		<div class="language-selector">
-			<select class="borderless-select" id="langSelect" onchange="changeLanguage()">
-				<option value="en">English</option>
-				<option value="vi">Tiếng Việt</option>
-				<option value="ja">日本語</option>
-				<option value="ko">한국어</option>
-				<option value="zh">中文</option>
-				<option value="es">Español</option>
-				<option value="de">Deutsch</option>
-				<option value="fr">Français</option>
-			</select>
+			<div class="header-actions">
+				<a href="https://forms.gle/WWx6KSn54FwZgpAe8" target="_blank" class="premium-button vi-only translate"
+					data-key="header.premium">Nâng cấp Premium</a>
+
+				<div class="language-selector">
+					<select class="borderless-select" id="langSelect" onchange="changeLanguage()" aria-label="Language">
+						<option value="en">English</option>
+						<option value="vi">Tiếng Việt</option>
+						<option value="ja">日本語</option>
+						<option value="ko">한국어</option>
+						<option value="zh">中文</option>
+						<option value="es">Español</option>
+						<option value="de">Deutsch</option>
+						<option value="fr">Français</option>
+					</select>
+				</div>
+			</div>
 		</div>
-		<a href="https://forms.gle/WWx6KSn54FwZgpAe8" target="_blank" class="premium-button vi-only">
-			<span class="translate" data-key="header.premium">Nâng cấp Premium</span>
-		</a>
 	</header>
 
-	<section class="hero-section container">
-		<div class="hero-content">
+	<!-- ===================== HERO ===================== -->
+	<section class="section hero">
+		<span class="blob blob--top-right" aria-hidden="true"></span>
+		<div class="section-inner hero-grid">
 			<div class="hero-text">
-				<div class="logo">
-					<img src="assets/playstore.png" alt="logo" width="50" height="50">
-					AI SHORTCUT
+				<div class="platform-tags">
+					<span class="tag tag-outline">Windows</span>
+					<span class="tag tag-outline">macOS</span>
+					<span class="tag tag-outline">iOS</span>
 				</div>
 
-				<h1 class="tagline translate" data-key="hero.tagline">.</h1>
-				<!-- <p class="hero-text-2 translate" data-key="hero.slogan">Smart shortcuts for a smarter workflow</p> -->
-				<p class="translate hero-text-2" data-key="hero.description"></p>
-				<p class="translate hero-text-3 how_it_works" data-key="hero.how_it_works"></p>
+				<h1 class="hero-title translate" data-key="hero.tagline">.</h1>
+				<p class="lead translate" data-key="hero.description"></p>
 
-				<p class="download translate" data-key="hero.cta">Download for free now!</p>
+				<div class="shortcut-strip">
+					<span class="keycaps">
+						<kbd>⌘</kbd>
+						<kbd>⇧</kbd>
+						<kbd>D</kbd>
+					</span>
+					<span class="shortcut-arrow" aria-hidden="true">→</span>
+					<span class="shortcut-result">
+						<img src="assets/playstore.png" alt="" width="30" height="30">
+						AI Shortcut
+					</span>
+				</div>
+
+				<p class="hero-note translate" data-key="hero.how_it_works"></p>
+
+				<div class="hero-cta">
+					<p class="hero-cta-label translate" data-key="hero.cta">Download for free now</p>
+					<div class="store-buttons">
+						<a id="download-win" href="https://apps.microsoft.com/detail/9nhg3004rs8b" target="_blank"
+							class="store-button microsoft-store">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+								<path d="M2 3h9v9H2V3m9 19H2v-9h9v9M21 3v9h-9V3h9m0 19h-9v-9h9v9" />
+							</svg>
+							<div>
+								Available at
+								<strong>WINDOWS STORE</strong>
+							</div>
+						</a>
+						<a id="download-mac" href="https://apps.apple.com/us/app/ai-shortcut/id6596770980?mt=12"
+							class="store-button mac-store" target="_blank">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+								<path
+									d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+							</svg>
+							<div>
+								Get it on
+								<strong>MAC STORE</strong>
+							</div>
+						</a>
+						<a id="download-ios" href="https://apps.apple.com/vn/app/aishortcut-keyboard/id6745312370"
+							class="store-button ios-store" target="_blank">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+								<path
+									d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+							</svg>
+							<div>
+								Get it on
+								<strong>iOS STORE</strong>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-media">
+				<img class="hero-img-image washed active" src="assets/imgs/pg1a.png" alt="AI Shortcut">
+				<img id="hero2" class="hero-img-image washed" src="assets/imgs/hero2-en.png" alt="AI Shortcut">
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== TÍNH NĂNG ===================== -->
+	<section class="section boost-efficiency">
+		<span class="blob blob--sage blob--bottom-left" aria-hidden="true"></span>
+		<div class="section-inner">
+			<div class="section-head">
+				<p class="tag">Features</p>
+				<h2 class="section-title translate" data-key="efficiency.title">Boost your work efficiency</h2>
+			</div>
+
+			<div class="feature-list">
+				<article class="feature-row">
+					<div class="feature-copy">
+						<p class="kicker">01</p>
+						<h3 class="translate" data-key="efficiency.translation.title">Translation</h3>
+						<p class="translate" data-key="efficiency.translation.description"></p>
+					</div>
+					<figure class="feature-media">
+						<img id="translation" class="feature-card-img washed" src="assets/imgs/Gif_trans.gif"
+							alt="Translation">
+					</figure>
+				</article>
+
+				<article class="feature-row feature-row--flip">
+					<div class="feature-copy">
+						<p class="kicker">02</p>
+						<h3 class="translate" data-key="efficiency.summarize.title">Summarize</h3>
+						<p class="translate" data-key="efficiency.summarize.description"></p>
+					</div>
+					<figure class="feature-media">
+						<img id="summarize" class="feature-card-img washed" src="assets/imgs/Gif_sum.gif"
+							alt="Summarize">
+					</figure>
+				</article>
+
+				<article class="feature-row">
+					<div class="feature-copy">
+						<p class="kicker">03</p>
+						<h3 class="translate" data-key="efficiency.communication.title">Communicate</h3>
+						<p class="translate" data-key="efficiency.communication.description"></p>
+					</div>
+					<figure class="feature-media">
+						<img id="communication" class="feature-card-img washed" src="assets/imgs/Gif_mail.gif"
+							alt="Communicate">
+					</figure>
+				</article>
+
+				<article class="feature-row feature-row--flip">
+					<div class="feature-copy">
+						<p class="kicker">04</p>
+						<h3 class="translate" data-key="efficiency.learn_english.title">Learn English</h3>
+						<p class="translate" data-key="efficiency.learn_english.description"></p>
+					</div>
+					<figure class="feature-media">
+						<img id="english" class="feature-card-img washed" src="assets/imgs/Gif_gram.gif"
+							alt="Learn English">
+					</figure>
+				</article>
+
+				<article class="feature-row">
+					<div class="feature-copy">
+						<p class="kicker">05</p>
+						<h3 class="translate" data-key="efficiency.customize_prompt.title">Customize Prompt</h3>
+						<p class="translate" data-key="efficiency.customize_prompt.description"></p>
+					</div>
+					<figure class="feature-media">
+						<img id="customize_prompt" class="feature-card-img washed" src="assets/imgs/CustomPromptEn.gif"
+							alt="Customize prompt">
+					</figure>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== LỢI THẾ — section nền tối DUY NHẤT của trang ===== -->
+	<section class="section section--dark advantages">
+		<span class="blob blob--right" aria-hidden="true"></span>
+		<div class="section-inner">
+			<div class="section-head">
+				<p class="tag tag--sage">Advantages</p>
+				<h2 class="section-title translate" data-key="advantages.title">Unlock your advantages</h2>
+			</div>
+
+			<div class="cards-3">
+				<article class="card card--dark">
+					<p class="card-num">01</p>
+					<h3 class="translate" data-key="advantages.time.title">Save time</h3>
+					<p class="translate" data-key="advantages.time.description"></p>
+				</article>
+				<article class="card card--dark">
+					<p class="card-num">02</p>
+					<h3 class="translate" data-key="advantages.productivity.title">Boost productivity</h3>
+					<p class="translate" data-key="advantages.productivity.description"></p>
+				</article>
+				<article class="card card--dark">
+					<p class="card-num">03</p>
+					<h3 class="translate" data-key="advantages.relationships.title">International relationships</h3>
+					<p class="translate" data-key="advantages.relationships.description"></p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== VÌ SAO HỢP VỚI BẠN ===================== -->
+	<section class="section why-it-works">
+		<span class="blob blob--top-right" aria-hidden="true"></span>
+		<div class="section-inner">
+			<div class="section-head">
+				<p class="tag">Why</p>
+				<h2 class="section-title translate" data-key="assistant.title">Why it works for you</h2>
+			</div>
+
+			<div class="why-grid">
+				<div class="why-media">
+					<img class="washed washed--warm" src="assets/imgs/Youll-be-more-productive.png" alt="AI Shortcut">
+				</div>
+
+				<ul class="features-list">
+					<li>
+						<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<rect width="7" height="9" x="3" y="3" rx="1" />
+							<rect width="7" height="5" x="14" y="3" rx="1" />
+							<rect width="7" height="9" x="14" y="12" rx="1" />
+							<rect width="7" height="5" x="3" y="16" rx="1" />
+						</svg>
+						<span>
+							<span class="translate strong" data-key="assistant.interface1"></span>
+							<span class="translate" data-key="assistant.interface2"></span>
+						</span>
+					</li>
+					<li>
+						<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M12 2 2 7l10 5 10-5-10-5z" />
+							<path d="m2 17 10 5 10-5" />
+							<path d="m2 12 10 5 10-5" />
+						</svg>
+						<span>
+							<span class="translate strong" data-key="assistant.integration1">.</span>
+							<span class="translate" data-key="assistant.integration2">.</span>
+						</span>
+					</li>
+					<li>
+						<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path
+								d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+						</svg>
+						<span>
+							<span class="translate strong" data-key="assistant.instant1">.</span>
+							<span class="translate" data-key="assistant.instant2">.</span>
+						</span>
+					</li>
+					<li>
+						<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" />
+							<path d="M10 19v-3.96" />
+							<path d="M7 19h5" />
+							<rect width="6" height="10" x="16" y="12" rx="2" />
+						</svg>
+						<span>
+							<span class="translate strong" data-key="assistant.crossPlatform1">.</span>
+							<span class="translate" data-key="assistant.crossPlatform2">.</span>
+						</span>
+					</li>
+					<li>
+						<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
+						</svg>
+						<span>
+							<span class="translate strong" data-key="assistant.shortcuts1">.</span>
+							<span class="translate" data-key="assistant.shortcuts2">.</span>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== 3 BƯỚC ===================== -->
+	<section class="section optimize">
+		<span class="blob blob--sage blob--bottom-left" aria-hidden="true"></span>
+		<div class="section-inner">
+			<div class="section-head">
+				<p class="tag">How to</p>
+				<h2 class="section-title translate" data-key="steps.title">Optimize work in 3 simple steps</h2>
+			</div>
+
+			<div class="steps">
+				<div class="step">
+					<span class="step-num">1</span>
+					<p class="translate" data-key="steps.step1">Download the app</p>
+				</div>
+				<div class="step">
+					<span class="step-num">2</span>
+					<p class="translate" data-key="steps.step2">Set up shortcuts</p>
+				</div>
+				<div class="step">
+					<span class="step-num">3</span>
+					<p class="translate" data-key="steps.step3">Select content and press the shortcut</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== CTA TẢI VỀ ===================== -->
+	<section class="section download-cta">
+		<span class="blob blob--right" aria-hidden="true"></span>
+		<div class="section-inner">
+			<div class="cta-panel">
+				<div class="cta-copy">
+					<div class="platform-tags">
+						<span class="tag tag-outline">Windows</span>
+						<span class="tag tag-outline">macOS</span>
+						<span class="tag tag-outline">iOS</span>
+					</div>
+					<h2 class="translate" data-key="other.free_download">Download for free now</h2>
+					<p class="body-text translate" data-key="other.footer"></p>
+				</div>
+
 				<div class="store-buttons">
-					<a id="download-win" href="https://apps.microsoft.com/detail/9nhg3004rs8b" target="_blank"
+					<a id="download-win-2" href="https://apps.microsoft.com/detail/9nhg3004rs8b" target="_blank"
 						class="store-button microsoft-store">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 							<path d="M2 3h9v9H2V3m9 19H2v-9h9v9M21 3v9h-9V3h9m0 19h-9v-9h9v9" />
 						</svg>
 						<div>
-							Available at<br>
+							Available at
 							<strong>WINDOWS STORE</strong>
 						</div>
 					</a>
-                    <a id="download-mac" href="https://apps.apple.com/us/app/ai-shortcut/id6596770980?mt=12"
-                    class="store-button mac-store" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                    </svg>
-                    <div>
-                        Get it on<br>
-                        <strong>MAC STORE</strong>
-                    </div>
-                </a>
-					<a id="download-ios" href="https://apps.apple.com/vn/app/aishortcut-keyboard/id6745312370" 
-						class="store-button ios-store" target="_blank">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+					<a id="download-mac-2" href="https://apps.apple.com/us/app/ai-shortcut/id6596770980?mt=12"
+						class="store-button mac-store" target="_blank">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 							<path
 								d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
 						</svg>
 						<div>
-							<span class="translate">Get it on</span><br>
+							Get it on
+							<strong>MAC STORE</strong>
+						</div>
+					</a>
+					<a id="download-ios-2" href="https://apps.apple.com/vn/app/aishortcut-keyboard/id6745312370"
+						class="store-button ios-store" target="_blank">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+							<path
+								d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+						</svg>
+						<div>
+							Get it on
 							<strong>iOS STORE</strong>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="hero-img">
-				<img class="hero-img-image active" src="assets/imgs/pg1a.png" alt="logo" width="100%">
-				<img id="hero2" class="hero-img-image" src="assets/imgs/hero2-en.png" alt="logo" width="100%">
-			</div>
 		</div>
 	</section>
 
-	<section class="boost-efficiency container">
-		<h2 class="section-title translate" data-key="efficiency.title">BOOST YOUR WORK EFFICIENCY</h2>
-		<div class="features-grid">
-			<div class="feature-card">
-				<h3 class="translate" data-key="efficiency.translation.title">Translation</h3>
-				<p class="translate" data-key="efficiency.translation.description">Select a word and see translation
-				</p>
-			</div>
-			<div class="feature-card">
-				<img id="translation" class="feature-card-img" src="assets/imgs/Gif_trans.gif" alt="translation"
-					width="80%" height="100%">
-			</div>
-		</div>
-		<div class="features-grid">
-			<div class="feature-card">
-				<h3 class="translate" data-key="efficiency.summarize.title"></h3>
-				<p class="translate" data-key="efficiency.summarize.description">Select a word and see translation
-				</p>
-			</div>
-			<div class="feature-card">
-				<img id="summarize" class="feature-card-img" src="assets/imgs/Gif_sum.gif" alt="translation" width="80%"
-					height="100%">
-			</div>
-		</div>
-		<div class="features-grid">
-			<div class="feature-card">
-				<h3 class="translate" data-key="efficiency.communication.title"></h3>
-				<p class="translate" data-key="efficiency.communication.description">Select a word and see translation
-				</p>
-			</div>
-			<div class="feature-card">
-				<img id="communication" class="feature-card-img" src="assets/imgs/Gif_mail.gif" alt="translation"
-					width="80%" height="100%">
-			</div>
-		</div>
-		<div class="features-grid">
-			<div class="feature-card">
-				<h3 class="translate" data-key="efficiency.learn_english.title"></h3>
-				<p class="translate" data-key="efficiency.learn_english.description">Select a word and see translation
-				</p>
-			</div>
-			<div class="feature-card">
-				<img id="english" class="feature-card-img" src="assets/imgs/Gif_mail.gif" alt="translation"
-					width="80%" height="100%">
-			</div>
-		</div>
-
-		<div class="features-grid">
-			<div class="feature-card">
-				<h3 class="translate" data-key="efficiency.customize_prompt.title">Customize Prompt</h3>
-				<p class="translate" data-key="efficiency.customize_prompt.description">Create and customize your own prompts for different scenarios</p>
-			</div>
-			<div class="feature-card">
-				<img id="customize_prompt" class="feature-card-img" src="assets/imgs/CustomPromptEn.gif" alt="customize prompt" width="80%" height="100%">
-			</div>
-		</div>
-
-	</section>
-
-	<section class="advantages container gray-bg">
-		<h2 class="section-title advantages-title translate" data-key="advantages.title">BOOST YOUR WORK EFFICIENCY</h2>
-		<div class="advantages-grid">
-			<div class="feature-card">
-				<h3 class="translate" data-key="advantages.time.title">Translation</h3>
-				<p class="translate " data-key="advantages.time.description">Select a word and see translation</p>
-			</div>
-			<div class="feature-card">
-				<h3 class="translate" data-key="advantages.productivity.title">Communicate</h3>
-				<p class="translate" data-key="advantages.productivity.description">Support for messaging and email in
-					multiple languages, using industry-specific terms and personalized tone.</p>
-			</div>
-			<div class="feature-card">
-				<h3 class="translate" data-key="advantages.relationships.title"></h3>
-				<p class="translate" data-key="advantages.relationships.description">Select a word and see translation
-				</p>
-			</div>
-		</div>
-	</section>
-	<h2 class="section-title translate gray-bg" data-key="assistant.title">BOOST YOUR WORK EFFICIENCY</h2>
-
-	<section class="why-it-works container gray-bg">
-		<div class="placeholder-image footer-img">
-			<img class="footer-img-image active" src="assets/imgs/Youll-be-more-productive.png" alt="logo" width="100%">
-		</div>
-		<div class="features-list">
-			<ul>
-				<li>
-					<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path
-							d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-					</svg>
-					<span>
-						<span class="translate strong" data-key="assistant.interface1"></span>
-						<span class="translate" data-key="assistant.interface2"></span>
-					</span>
-				</li>
-				<li>
-					<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path
-							d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-					</svg>
-					<span>
-						<span class="translate strong" data-key="assistant.integration1">.</span>
-						<span class="translate" data-key="assistant.integration2">.</span>
-					</span>
-				</li>
-				<li>
-					<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-						<path d="M22 4L12 14.01l-3-3" />
-					</svg>
-					<span>
-						<span class="translate strong" data-key="assistant.instant1">.</span>
-						<span class="translate" data-key="assistant.instant2">.</span>
-					</span>
-				</li>
-				<li>
-					<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-					</svg>
-					<span>
-						<span class="translate strong" data-key="assistant.crossPlatform1">.</span>
-						<span class="translate" data-key="assistant.crossPlatform2">.</span>
-					</span>
-				</li>
-				<li>
-					<svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path
-							d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-					</svg>
-					<span>
-						<span class="translate strong" data-key="assistant.shortcuts1">.</span>
-						<span class="translate" data-key="assistant.shortcuts2">.</span>
-					</span>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-	<section class="optimize container">
-		<h2 class="translate section-title" data-key="steps.title">OPTIMIZE WORK IN 3 SIMPLE STEPS</h2>
-		<div class="steps">
-			<div class="step">
-				<div class="step-icon">
-					<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-					</svg>
-				</div>
-				<h3>Step 1</h3>
-				<p class="translate" data-key="steps.step1">Download the app</p>
-			</div>
-			<div class="step">
-				<div class="step-icon">
-					<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path
-							d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
-					</svg>
-				</div>
-				<h3>Step 2</h3>
-				<p class="translate" data-key="steps.step2">Download the app</p>
-			</div>
-			<div class="step">
-				<div class="step-icon">
-					<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7m4 13l4-4m-4 4l-4-4m4 4V3" />
-					</svg>
-				</div>
-				<h3>Step 3</h3>
-				<p class="translate" data-key="steps.step3">Download the app</p>
-			</div>
-		</div>
-		<div class="horizontal">
-			<div class="experience-description" style="text-align: center; max-width: 800px; margin: 40px">
-				<p class="translate" data-key="other.footer"></p>
-			</div>
-			<div>
-				<h2 class="translate" data-key="other.free_download">.</h2>
-				<div class="store-buttons">
-					<a id="download-win" href="https://apps.microsoft.com/detail/9nhg3004rs8b" target="_blank"
-					class="store-button microsoft-store">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-						<path d="M2 3h9v9H2V3m9 19H2v-9h9v9M21 3v9h-9V3h9m0 19h-9v-9h9v9" />
-					</svg>
-					<div>
-						Available at<br>
-						<strong>WINDOWS STORE</strong>
-					</div>
-				</a>
-					<a id="download-mac" href="https://apps.apple.com/us/app/ai-shortcut/id6596770980?mt=12"
-					class="store-button mac-store" target="_blank">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-						<path
-							d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-					</svg>
-					<div>
-						Get it on<br>
-						<strong>MAC STORE</strong>
-					</div>
-				</a>
-					<a id="download-ios" href="https://apps.apple.com/vn/app/aishortcut-keyboard/id6745312370" 
-						class="store-button ios-store" target="_blank">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-							<path
-								d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-						</svg>
-						<div>
-							<span class="translate">Get it on</span><br>
-							<strong>iOS STORE</strong>
-						</div>
-					</a>
-				</div>
-			</div>
-
-		</div>
-
-	</section>
-
+	<!-- ===================== FOOTER ===================== -->
 	<footer class="footer">
-		<div class="container">
+		<div class="footer-inner">
 			<div class="footer-content">
 				<div class="footer-brand">
-					<div class="logo-icon" style="margin-bottom: 15px;">
-						<img src="assets/playstore.png" alt="logo" width="50" height="50">
-					</div>
-					<div class="footer-brand-text">
-						<h3>AI SHORTCUT</h3>
-						<p class="translate" data-key="footer.tagline">Boost your productivity with AI</p>
-						<span class="copyright">© 2023-2025 AIShortcut</span>
-					</div>
+					<img src="assets/playstore.png" alt="AI Shortcut" width="48" height="48">
+					<h3>AI SHORTCUT</h3>
+					<p class="translate" data-key="footer.tagline">Boost your productivity with AI</p>
+					<span class="copyright">© 2023-2026 AIShortcut</span>
 				</div>
 
 				<div class="footer-links">
 					<h4 class="translate" data-key="footer.products.title">Products</h4>
 					<ul>
-						<li><a href="https://apps.microsoft.com/detail/9nhg3004rs8b" target="_blank" class="translate" data-key="footer.products.windows">Windows App</a></li>
-						<li><a href="https://apps.apple.com/us/app/ai-shortcut/id6596770980?mt=12" target="_blank" class="translate" data-key="footer.products.mac">Mac App</a></li>
-						<li><a href="https://apps.apple.com/vn/app/aishortcut-keyboard/id6745312370" target="_blank" class="translate" data-key="footer.products.ios">iOS App</a></li>
+						<li><a href="https://apps.microsoft.com/detail/9nhg3004rs8b" target="_blank" class="translate"
+								data-key="footer.products.windows">Windows App</a></li>
+						<li><a href="https://apps.apple.com/us/app/ai-shortcut/id6596770980?mt=12" target="_blank"
+								class="translate" data-key="footer.products.mac">Mac App</a></li>
+						<li><a href="https://apps.apple.com/vn/app/aishortcut-keyboard/id6745312370" target="_blank"
+								class="translate" data-key="footer.products.ios">iOS App</a></li>
 					</ul>
 				</div>
 
@@ -344,17 +414,22 @@
 					<h4 class="translate" data-key="footer.connect.title">Connect</h4>
 					<ul>
 						<li><a href="https://www.facebook.com/aishortcut.powerofai" target="_blank" class="social-link">
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0014.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
-							</svg>
-							<span>Facebook</span>
-						</a></li>
-						<li class="vi-only"><a href="https://www.facebook.com/groups/4194112540817016" target="_blank" class="social-link">
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13v5h2v-5h-2zm0 6v2h2v-2h-2z"></path>
-							</svg>
-							<span class="translate" data-key="footer.connect.community">Community Group</span>
-						</a></li>
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path
+										d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0014.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z">
+									</path>
+								</svg>
+								<span>Facebook</span>
+							</a></li>
+						<li class="vi-only"><a href="https://www.facebook.com/groups/4194112540817016" target="_blank"
+								class="social-link">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path
+										d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13v5h2v-5h-2zm0 6v2h2v-2h-2z">
+									</path>
+								</svg>
+								<span class="translate" data-key="footer.connect.community">Community Group</span>
+							</a></li>
 					</ul>
 				</div>
 
@@ -362,26 +437,31 @@
 					<h4 class="translate" data-key="footer.support.title">Support</h4>
 					<ul>
 						<li><a href="mailto:tuanphamanh91@gmail.com?subject=Contact Support&body=" class="support-link">
-							<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-								<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
-							</svg>
-							<span class="translate" data-key="footer.support.email">Email Support</span>
-						</a></li>
-						<!-- <li><a href="#" class="support-link translate" data-key="footer.support.faq">FAQ</a></li> -->
-						<li><a href="https://www.freeprivacypolicy.com/live/ce2da933-a9c9-4fb5-ba83-0a7c05679e29" target="_blank" class="support-link translate" data-key="footer.support.privacy">Privacy Policy</a></li>
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path
+										d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+									</path>
+								</svg>
+								<span class="translate" data-key="footer.support.email">Email Support</span>
+							</a></li>
+						<li><a href="https://www.freeprivacypolicy.com/live/ce2da933-a9c9-4fb5-ba83-0a7c05679e29"
+								target="_blank" class="support-link translate"
+								data-key="footer.support.privacy">Privacy Policy</a></li>
 					</ul>
 				</div>
 			</div>
-			
+
 			<div class="footer-bottom">
-				<p class="translate" data-key="footer.description">AI Shortcut helps you translate, rewrite, communicate, and summarize documents using the power of AI. Available on Windows, Mac, and iOS devices.</p>
-				
+				<p class="translate" data-key="footer.description">AI Shortcut helps you translate, rewrite,
+					communicate, and summarize documents using the power of AI. Available on Windows, Mac, and iOS
+					devices.</p>
+
 				<div class="footer-bottom-links">
-					<a href="https://www.freeprivacypolicy.com/live/fc444afb-fafb-4c9a-ab49-4c0903378247" target="_blank" class="translate" data-key="footer.terms">Terms of Service</a>
+					<a href="https://www.freeprivacypolicy.com/live/fc444afb-fafb-4c9a-ab49-4c0903378247" target="_blank"
+						class="translate" data-key="footer.terms">Terms of Service</a>
 					<span class="separator">|</span>
-					<a href="https://www.freeprivacypolicy.com/live/ce2da933-a9c9-4fb5-ba83-0a7c05679e29" target="_blank" class="translate" data-key="footer.privacy">Privacy Policy</a>
-					<!-- <span class="separator">|</span> -->
-					<!-- <a href="#" class="translate" data-key="footer.about">About Us</a> -->
+					<a href="https://www.freeprivacypolicy.com/live/ce2da933-a9c9-4fb5-ba83-0a7c05679e29" target="_blank"
+						class="translate" data-key="footer.privacy">Privacy Policy</a>
 				</div>
 			</div>
 		</div>

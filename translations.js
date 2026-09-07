@@ -1043,17 +1043,15 @@ setInterval(() => {
   images[currentIndex].classList.add("active");
 }, 6000);
 
-document.getElementById("download-mac").addEventListener("click", function(event) {
-  console.log("download-mac")
-  gtag("event", "download-mac");
-});
-
-document.getElementById("download-ios").addEventListener("click", function(event) {
-  console.log("download-ios")
-  gtag("event", "download-ios");
-});
-
-document.getElementById("download-win").addEventListener("click", function(event) {
-  console.log("download-win")
-  gtag("event", "download-win");
+// Nut store xuat hien o ca hero va CTA cuoi trang (id "...-2")
+["download-mac", "download-ios", "download-win"].forEach((name) => {
+  [name, name + "-2"].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("click", function () {
+        console.log(name);
+        gtag("event", name);
+      });
+    }
+  });
 });
