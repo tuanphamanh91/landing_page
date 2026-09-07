@@ -76,8 +76,8 @@ const translations = {
       slogan: "Quick translation with one shortcut",
       description:
         "Effortlessly translate, rewrite, communicate, and summarize documents using the power of AI.",
-      how_it_works: "Set up shortcuts for commonly used prompts (e.g., translation, rewriting, summarizing, chatting, etc.), then select the text you want the AI to process and press the shortcut.",
-      cta: "Download for free now!",
+      how_it_works: "Select the text, press the shortcut. No copy-paste, no switching windows.",
+      cta: "Download for free now",
       download_mac: "Get it on MAC APP STORE",
       download_ios: "Get it on",
       download_windows: "Available at MICROSOFT",
@@ -100,9 +100,9 @@ const translations = {
           "Capture key points from documents in seconds, focusing only on the most important details.",
       },
       learn_english: {
-        title: "Learn English",
+        title: "Grammar analysis",
         description:
-          "Improve your English skills with AI.",
+          "Select an English sentence and see what is wrong and how to fix it.",
       },
       customize_prompt: {
         title: "Customize Prompt",
@@ -151,10 +151,15 @@ const translations = {
       step2: "Set up shortcuts",
       step3: "Select content and press the shortcut",
     },
+    privacy: {
+      title: "Your data",
+      body:
+        "AI Shortcut stores none of the content you process. Text goes straight to ChatGPT and follows OpenAI's data policy.",
+    },
     other: {
       footer:
         "Experience a streamlined, straightforward workflow focused on what matters most — empowering you to grow both your career and yourself efficiently.",
-      free_download: "Download for free now!",
+      free_download: "Download for free now",
       join_fb: "Join Facebook"
     },
     footer: {
@@ -196,8 +201,8 @@ const translations = {
       slogan: "Dịch tức thì với một phím tắt",
       description:
         "Dễ dàng dịch thuật, viết lại, trò chuyện và tóm tắt tài liệu với sức mạnh của AI.",
-      how_it_works: "Cài đặt phím tắt cho các prompt thường dùng (ví dụ: dịch thuật, viết lại, tóm tắt, trò chuyện, ...), sau đó chọn văn bản cần AI xử lý và ấn phím tắt.",
-      cta: "Tải về miễn phí ngay!",
+      how_it_works: "Bôi đen văn bản, nhấn phím tắt. Không copy, không đổi cửa sổ.",
+      cta: "Tải về miễn phí ngay",
       download_mac: "Tải từ MAC OS STORE",
       download_ios: "Tải trên iOS STORE",
       download_windows: "Có sẵn trên MICROSOFT",
@@ -220,9 +225,9 @@ const translations = {
           "Tóm tắt tài liệu chỉ trong vài giây, tập trung vào những điều quan trọng nhất.",
       },
       learn_english: {
-        title: "Học tiếng Anh",
+        title: "Phân tích ngữ pháp",
         description:
-          "Nâng cao kỹ năng tiếng Anh với AI.",
+          "Chọn một câu tiếng Anh, AI chỉ ra lỗi sai và cách sửa.",
       },
       customize_prompt: {
         title: "Tùy chỉnh Prompt",
@@ -249,7 +254,7 @@ const translations = {
       },
     },
     assistant: {
-      title: "Trợ lý thân thiện của bạn: ",
+      title: "Vì sao nó hợp với bạn",
 
       interface1: "Giao diện đơn giản: ",
       interface2: "Thiết kế dễ hiểu, dễ sử dụng.",
@@ -271,6 +276,11 @@ const translations = {
       step1: "Tải ứng dụng",
       step2: "Cài đặt câu lệnh cho mỗi phím tắt",
       step3: "Chọn nội dung và ấn phím tắt",
+    },
+    privacy: {
+      title: "Dữ liệu của bạn",
+      body:
+        "AI Shortcut không lưu bất kỳ nội dung nào bạn xử lý. Văn bản được gửi thẳng tới ChatGPT và tuân theo chính sách dữ liệu của OpenAI.",
     },
     other: {
       footer:
@@ -317,8 +327,8 @@ const translations = {
       slogan: "ショートカット一つですばやく翻訳",
       description:
         "AIのパワーを使って、簡単に翻訳、書き直し、コミュニケーション、文書の要約ができます。",
-      how_it_works: "よく使うプロンプト（翻訳、書き直し、要約、チャットなど）のショートカットを設定し、AIに処理させたいテキストを選択してショートカットを押すだけです。",
-      cta: "今すぐ無料でダウンロード！",
+      how_it_works: "テキストを選んで、ショートカットを押すだけ。コピペも画面の切り替えも不要です。",
+      cta: "今すぐ無料でダウンロード",
       download_mac: "MAC STOREで入手",
       download_ios: "iOS STOREで入手",
       download_windows: "MICROSOFTで入手可能",
@@ -341,9 +351,9 @@ const translations = {
           "数秒で文書の重要なポイントをキャプチャし、最も重要な詳細だけに焦点を当てます。",
       },
       learn_english: {
-        title: "英語学習",
+        title: "文法チェック",
         description:
-          "AIであなたの英語スキルを向上させましょう。",
+          "英文を選ぶだけで、誤りとその直し方がわかります。",
       },
       customize_prompt: {
         title: "プロンプトのカスタマイズ",
@@ -392,10 +402,15 @@ const translations = {
       step2: "ショートカットを設定",
       step3: "コンテンツを選択してショートカットを押す",
     },
+    privacy: {
+      title: "あなたのデータ",
+      body:
+        "AI Shortcut は処理した内容を一切保存しません。テキストは ChatGPT に直接送信され、OpenAI のデータポリシーに従います。",
+    },
     other: {
       footer:
         "最も重要なことに焦点を当てた合理的で分かりやすいワークフローを体験 — キャリアと自己成長を効率的に促進します。",
-      free_download: "今すぐ無料でダウンロード！",
+      free_download: "今すぐ無料でダウンロード",
       join_fb: "Facebookに参加"
     },
     footer: {
@@ -436,8 +451,8 @@ const translations = {
       tagline: "더 간단하게 - 더 집중적으로",
       slogan: "단축키 하나로 빠른 번역",
       description: "AI의 힘으로 손쉽게 번역, 재작성, 소통 및 문서 요약이 가능합니다.",
-      how_it_works: "자주 사용하는 프롬프트(예: 번역, 재작성, 요약, 채팅 등)에 대한 단축키를 설정한 다음, AI가 처리할 텍스트를 선택하고 단축키를 누르기만 하면 됩니다.",
-      cta: "지금 무료로 다운로드하세요!",
+      how_it_works: "텍스트를 선택하고 단축키를 누르세요. 복사·붙여넣기도, 창 전환도 필요 없습니다.",
+      cta: "지금 무료로 다운로드하세요",
       download_mac: "MAC APP STORE에서 다운로드",
       download_ios: "다운로드하기",
       download_windows: "MICROSOFT에서 이용 가능",
@@ -457,8 +472,8 @@ const translations = {
         description: "몇 초 안에 문서의 핵심 내용을 파악하고, 가장 중요한 세부 사항에만 집중하세요.",
       },
       learn_english: {
-        title: "영어 학습",
-        description: "AI로 영어 실력을 향상시키세요.",
+        title: "문법 분석",
+        description: "영어 문장을 선택하면 틀린 부분과 고치는 방법을 알려줍니다.",
       },
       customize_prompt: {
         title: "프롬프트 맞춤 설정",
@@ -503,9 +518,14 @@ const translations = {
       step2: "단축키 설정",
       step3: "콘텐츠 선택 후 단축키 누르기",
     },
+    privacy: {
+      title: "사용자 데이터",
+      body:
+        "AI Shortcut은 처리한 내용을 저장하지 않습니다. 텍스트는 ChatGPT로 바로 전송되며 OpenAI의 데이터 정책을 따릅니다.",
+    },
     other: {
       footer: "가장 중요한 것에 집중된 간소화되고 명확한 워크플로우를 경험하세요 — 효율적으로 경력과 자신을 성장시킬 수 있도록 지원합니다.",
-      free_download: "지금 무료로 다운로드하세요!",
+      free_download: "지금 무료로 다운로드하세요",
       join_fb: "페이스북 참여"
     },
     footer: {
@@ -546,8 +566,8 @@ const translations = {
       tagline: "更简单 - 更专注",
       slogan: "一键快速翻译",
       description: "利用AI的力量轻松翻译、改写、交流和总结文档。",
-      how_it_works: "为常用提示设置快捷键（如翻译、改写、总结、聊天等），然后选择你想要AI处理的文本并按快捷键。",
-      cta: "立即免费下载！",
+      how_it_works: "选中文字，按下快捷键。无需复制粘贴，无需切换窗口。",
+      cta: "立即免费下载",
       download_mac: "在MAC APP STORE下载",
       download_ios: "在iOS STORE获取",
       download_windows: "在MICROSOFT可用",
@@ -567,8 +587,8 @@ const translations = {
         description: "几秒钟内捕捉文档中的要点，只关注最重要的细节。",
       },
       learn_english: {
-        title: "学习英语",
-        description: "通过AI提高您的英语技能。",
+        title: "语法分析",
+        description: "选中一句英文，AI 指出错误并说明如何修改。",
       },
       customize_prompt: {
         title: "自定义提示",
@@ -613,9 +633,14 @@ const translations = {
       step2: "设置快捷键",
       step3: "选择内容并按快捷键",
     },
+    privacy: {
+      title: "你的数据",
+      body:
+        "AI Shortcut 不保存你处理的任何内容。文本直接发送至 ChatGPT，并遵循 OpenAI 的数据政策。",
+    },
     other: {
       footer: "体验精简、直接的工作流程，专注于最重要的事情——高效赋能您的职业和个人成长。",
-      free_download: "立即免费下载！",
+      free_download: "立即免费下载",
       join_fb: "加入Facebook"
     },
     footer: {
@@ -656,8 +681,8 @@ const translations = {
       tagline: "Más simple - Más enfocado",
       slogan: "Traducción rápida con un solo atajo",
       description: "Traduce, reescribe, comunica y resume documentos sin esfuerzo utilizando el poder de la IA.",
-      how_it_works: "Configura atajos para indicaciones comúnmente utilizadas (por ejemplo, traducción, reescritura, resumen, chat, etc.), luego selecciona el texto que deseas que la IA procese y presiona el atajo.",
-      cta: "¡Descarga gratis ahora!",
+      how_it_works: "Selecciona el texto y pulsa el atajo. Sin copiar y pegar, sin cambiar de ventana.",
+      cta: "Descarga gratis ahora",
       download_mac: "Consíguelo en MAC APP STORE",
       download_ios: "Consíguelo en",
       download_windows: "Disponible en MICROSOFT",
@@ -677,8 +702,8 @@ const translations = {
         description: "Captura los puntos clave de documentos en segundos, enfocándote solo en los detalles más importantes.",
       },
       learn_english: {
-        title: "Aprender inglés",
-        description: "Mejora tus habilidades en inglés con IA.",
+        title: "Análisis gramatical",
+        description: "Selecciona una frase en inglés y descubre qué falla y cómo corregirlo.",
       },
       customize_prompt: {
         title: "Personalizar indicaciones",
@@ -723,9 +748,14 @@ const translations = {
       step2: "Configura los atajos",
       step3: "Selecciona el contenido y presiona el atajo",
     },
+    privacy: {
+      title: "Tus datos",
+      body:
+        "AI Shortcut no guarda ningún contenido que proceses. El texto va directo a ChatGPT y sigue la política de datos de OpenAI.",
+    },
     other: {
       footer: "Experimenta un flujo de trabajo optimizado y directo enfocado en lo que más importa — empoderándote para desarrollar tanto tu carrera como a ti mismo de manera eficiente.",
-      free_download: "¡Descarga gratis ahora!",
+      free_download: "Descarga gratis ahora",
       join_fb: "Únete a Facebook"
     },
     footer: {
@@ -766,8 +796,8 @@ const translations = {
       tagline: "Einfacher - Fokussierter",
       slogan: "Schnelle Übersetzung mit nur einem Shortcut",
       description: "Müheloses Übersetzen, Umschreiben, Kommunizieren und Zusammenfassen von Dokumenten mit der Kraft der KI.",
-      how_it_works: "Richten Sie Shortcuts für häufig verwendete Prompts ein (z. B. Übersetzung, Umschreiben, Zusammenfassen, Chatten usw.), wählen Sie dann den Text aus, den die KI verarbeiten soll, und drücken Sie den Shortcut.",
-      cta: "Jetzt kostenlos herunterladen!",
+      how_it_works: "Text markieren, Shortcut drücken. Kein Kopieren und Einfügen, kein Fensterwechsel.",
+      cta: "Jetzt kostenlos herunterladen",
       download_mac: "Holen Sie es im MAC APP STORE",
       download_ios: "Holen Sie es auf",
       download_windows: "Verfügbar bei MICROSOFT",
@@ -787,8 +817,8 @@ const translations = {
         description: "Erfassen Sie die wichtigsten Punkte aus Dokumenten in Sekunden und konzentrieren Sie sich nur auf die wichtigsten Details.",
       },
       learn_english: {
-        title: "Englisch lernen",
-        description: "Verbessern Sie Ihre Englischkenntnisse mit KI.",
+        title: "Grammatikanalyse",
+        description: "Markieren Sie einen englischen Satz und sehen Sie, was falsch ist und wie es richtig geht.",
       },
       customize_prompt: {
         title: "Prompt anpassen",
@@ -833,9 +863,14 @@ const translations = {
       step2: "Shortcuts einrichten",
       step3: "Inhalt auswählen und Shortcut drücken",
     },
+    privacy: {
+      title: "Ihre Daten",
+      body:
+        "AI Shortcut speichert keine der von Ihnen verarbeiteten Inhalte. Der Text geht direkt an ChatGPT und unterliegt der Datenrichtlinie von OpenAI.",
+    },
     other: {
       footer: "Erleben Sie einen optimierten, unkomplizierten Arbeitsablauf, der sich auf das Wesentlichste konzentriert — und Sie befähigt, sowohl Ihre Karriere als auch sich selbst effizient zu entwickeln.",
-      free_download: "Jetzt kostenlos herunterladen!",
+      free_download: "Jetzt kostenlos herunterladen",
       join_fb: "Facebook beitreten"
     },
     footer: {
@@ -876,8 +911,8 @@ const translations = {
       tagline: "Plus simple - Plus focalisé",
       slogan: "Traduction rapide avec un seul raccourci",
       description: "Traduisez, réécrivez, communiquez et résumez facilement des documents grâce à la puissance de l'IA.",
-      how_it_works: "Configurez des raccourcis pour les invites fréquemment utilisées (par exemple, traduction, réécriture, résumé, chat, etc.), puis sélectionnez le texte que vous souhaitez que l'IA traite et appuyez sur le raccourci.",
-      cta: "Téléchargez gratuitement maintenant !",
+      how_it_works: "Sélectionnez le texte, appuyez sur le raccourci. Sans copier-coller, sans changer de fenêtre.",
+      cta: "Téléchargez gratuitement maintenant",
       download_mac: "Obtenez-le sur MAC APP STORE",
       download_ios: "Obtenez-le sur",
       download_windows: "Disponible chez MICROSOFT",
@@ -897,8 +932,8 @@ const translations = {
         description: "Captez les points clés des documents en quelques secondes, en vous concentrant uniquement sur les détails les plus importants.",
       },
       learn_english: {
-        title: "Apprendre l'anglais",
-        description: "Améliorez vos compétences en anglais avec l'IA.",
+        title: "Analyse grammaticale",
+        description: "Sélectionnez une phrase en anglais et voyez l'erreur et sa correction.",
       },
       customize_prompt: {
         title: "Personnaliser les invites",
@@ -943,9 +978,14 @@ const translations = {
       step2: "Configurez les raccourcis",
       step3: "Sélectionnez le contenu et appuyez sur le raccourci",
     },
+    privacy: {
+      title: "Vos données",
+      body:
+        "AI Shortcut ne conserve aucun contenu que vous traitez. Le texte est envoyé directement à ChatGPT et suit la politique de données d'OpenAI.",
+    },
     other: {
       footer: "Expérimentez un flux de travail rationalisé et direct, concentré sur ce qui compte le plus — vous permettant de développer efficacement à la fois votre carrière et vous-même.",
-      free_download: "Téléchargez gratuitement maintenant !",
+      free_download: "Téléchargez gratuitement maintenant",
       join_fb: "Rejoindre Facebook"
     },
     footer: {

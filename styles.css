@@ -845,6 +845,38 @@ kbd {
     gap: var(--space-2);
 }
 
+/* --- Khối trấn an dữ liệu (đặt trong panel CTA) --- */
+.privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background: var(--color-accent-2-100);
+    border-radius: var(--radius-sm);
+    max-width: 52ch;
+}
+
+.privacy-note svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: var(--color-accent-2-700);
+}
+
+.privacy-note .kicker {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--color-accent-2-700);
+}
+
+.privacy-note span span:last-child {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-neutral-800);
+    text-wrap: pretty;
+}
+
 /* ============================================================
    Footer
    ============================================================ */
