@@ -128,28 +128,29 @@ const translations = {
           "Communicate effectively in any language to strengthen global connections.",
       },
     },
-    assistant: {
-      title: "Why it works for you",
-      interface1: "Simple interface: ",
-      interface2: "Intuitive design, easy to understand and use.",
+    faq: {
+      title: "Questions before you download",
 
-      integration1: "Multi-platform integration: ",
-      integration2: "Work with all other applications on your Mac/PC/iOS device.",
+      q1: "Can I use it in languages other than English?",
+      a1: "Yes. It works with any language you want.",
 
-      instant1: "Instant results: ",
-      instant2: "Complete tasks right where you are, without switching tabs.",
+      q2: "Do I need an OpenAI account or API key?",
+      a2: "No. The app handles that for you.",
 
-      crossPlatform1: "Cross-platform: ",
-      crossPlatform2: "Available on Windows, macOS and iOS devices.",
+      q3: "Does the app store my data?",
+      a3: "No. The app stores none of your content. The text does pass through ChatGPT and follows OpenAI's data policy.",
 
-      shortcuts1: "Personalized shortcuts: ",
-      shortcuts2: "Set up shortcuts that fit your workflow.",
-    },
-    steps: {
-      title: "Optimize work in 3 simple steps",
-      step1: "Download the app",
-      step2: "Set up shortcuts",
-      step3: "Select content and press the shortcut",
+      q4: "Which apps does it work in?",
+      a4: "Every app: your browser, Word, email, chat...",
+
+      q5: "Can I change the shortcuts?",
+      a5: "Yes. Set your own key combination and write your own prompt behind each one.",
+
+      q6: "How do I use it on iPhone or iPad?",
+      a6: "Add AI Shortcut as a keyboard in Settings, then switch to it while typing.",
+
+      q7: "What can it do besides translate?",
+      a7: "You write your own prompts, so you can ask the AI for anything: rewrite something formally, analyse what a paragraph means, summarise a document.",
     },
     privacy: {
       title: "Your data",
@@ -253,29 +254,29 @@ const translations = {
           "Hỗ trợ giao tiếp đa ngôn ngữ để xây dựng mối quan hệ thuận lợi.",
       },
     },
-    assistant: {
-      title: "Vì sao nó hợp với bạn",
+    faq: {
+      title: "Câu hỏi trước khi tải",
 
-      interface1: "Giao diện đơn giản: ",
-      interface2: "Thiết kế dễ hiểu, dễ sử dụng.",
+      q1: "Ngoài tiếng Anh, dùng được với ngôn ngữ khác không?",
+      a1: "Được. Bạn dùng được với bất cứ ngôn ngữ nào bạn muốn.",
 
-      integration1: "Tích hợp mọi nền tảng: ",
-      integration2: "Làm việc với tất cả ứng dụng trên máy tính và thiết bị iOS của bạn.",
+      q2: "Tôi có cần tài khoản hay API key của OpenAI không?",
+      a2: "Không cần. Ứng dụng tự xử lý phần đó cho bạn.",
 
-      instant1: "Kết quả tức thì: ",
-      instant2: "Mọi thao tác hoàn thành ngay tại vị trí bạn làm việc.",
+      q3: "Ứng dụng có lưu trữ dữ liệu của tôi không?",
+      a3: "Không. Ứng dụng không lưu bất kỳ nội dung nào của bạn. Văn bản có đi qua ChatGPT và tuân theo chính sách dữ liệu của OpenAI.",
 
-      crossPlatform1: "Đa hệ điều hành: ",
-      crossPlatform2: "Sử dụng cho Windows, MacOS và iOS.",
+      q4: "Dùng được trong những ứng dụng nào?",
+      a4: "Mọi ứng dụng: trình duyệt, Word, email, chat...",
 
-      shortcuts1: "Cá nhân hoá linh hoạt: ",
-      shortcuts2: "Tuỳ chỉnh phím tắt theo thói quen của bạn.",
-    },
-    steps: {
-      title: "Tối ưu công việc của bạn trong 3 bước",
-      step1: "Tải ứng dụng",
-      step2: "Cài đặt câu lệnh cho mỗi phím tắt",
-      step3: "Chọn nội dung và ấn phím tắt",
+      q5: "Tôi đổi phím tắt được không?",
+      a5: "Được. Bạn tự đặt tổ hợp phím và viết câu lệnh riêng sau mỗi phím tắt.",
+
+      q6: "Trên iPhone hay iPad dùng thế nào?",
+      a6: "Thêm AI Shortcut làm bàn phím trong phần Cài đặt, rồi chuyển sang nó khi gõ.",
+
+      q7: "Ngoài dịch, ứng dụng còn làm được gì?",
+      a7: "Ứng dụng cho phép bạn tự viết câu lệnh, nên bạn yêu cầu AI bất cứ điều gì: viết lại trang trọng, phân tích ý nghĩa đoạn văn, tóm tắt tài liệu.",
     },
     privacy: {
       title: "Dữ liệu của bạn",
@@ -379,28 +380,29 @@ const translations = {
           "どんな言語でも効果的にコミュニケーションを取り、世界的なつながりを強化できます。",
       },
     },
-    assistant: {
-      title: "なぜあなたに役立つのか",
-      interface1: "シンプルなインターフェース: ",
-      interface2: "直感的なデザインで理解しやすく使いやすい。",
+    faq: {
+      title: "ダウンロード前によくある質問",
 
-      integration1: "マルチプラットフォーム統合: ",
-      integration2: "Mac/PC/iOS端末上のすべてのアプリケーションと連携。",
+      q1: "英語以外の言語でも使えますか",
+      a1: "使えます。お好きな言語で利用できます。",
 
-      instant1: "即時結果: ",
-      instant2: "タブを切り替えることなく、今いる場所で直ちにタスクを完了。",
+      q2: "OpenAI のアカウントや API キーは必要ですか",
+      a2: "不要です。アプリ側で処理します。",
 
-      crossPlatform1: "クロスプラットフォーム: ",
-      crossPlatform2: "Windows、macOS、iOSデバイスで利用可能。",
+      q3: "アプリは私のデータを保存しますか",
+      a3: "保存しません。アプリは内容を一切保存しません。テキストは ChatGPT を経由し、OpenAI のデータポリシーに従います。",
 
-      shortcuts1: "パーソナライズされたショートカット: ",
-      shortcuts2: "あなたのワークフローに合わせたショートカットを設定。",
-    },
-    steps: {
-      title: "3つの簡単なステップで作業を最適化",
-      step1: "アプリをダウンロード",
-      step2: "ショートカットを設定",
-      step3: "コンテンツを選択してショートカットを押す",
+      q4: "どのアプリで使えますか",
+      a4: "すべてのアプリで使えます。ブラウザ、Word、メール、チャットなどです。",
+
+      q5: "ショートカットキーは変更できますか",
+      a5: "できます。キーの組み合わせを自分で決め、ショートカットごとに自分のプロンプトを書けます。",
+
+      q6: "iPhone や iPad ではどう使いますか",
+      a6: "設定で AI Shortcut をキーボードとして追加し、入力中に切り替えます。",
+
+      q7: "翻訳以外に何ができますか",
+      a7: "プロンプトを自分で書けるので、AI に何でも頼めます。丁寧な文に書き直す、段落の意味を分析する、文書を要約するなどです。",
     },
     privacy: {
       title: "あなたのデータ",
@@ -495,28 +497,29 @@ const translations = {
         description: "어떤 언어로든 효과적으로 의사소통하여 글로벌 연결을 강화하세요.",
       },
     },
-    assistant: {
-      title: "왜 이 앱이 필요한가",
-      interface1: "간단한 인터페이스: ",
-      interface2: "직관적인 디자인으로 이해하고 사용하기 쉽습니다.",
-      
-      integration1: "다중 플랫폼 통합: ",
-      integration2: "Mac/PC/iOS 기기의 모든 다른 애플리케이션과 함께 작동합니다.",
-      
-      instant1: "즉각적인 결과: ",
-      instant2: "탭을 전환하지 않고도 현재 위치에서 바로 작업을 완료할 수 있습니다.",
-      
-      crossPlatform1: "크로스 플랫폼: ",
-      crossPlatform2: "Windows, macOS 및 iOS 기기에서 사용 가능합니다.",
-      
-      shortcuts1: "맞춤형 단축키: ",
-      shortcuts2: "자신의 워크플로우에 맞는 단축키를 설정하세요.",
-    },
-    steps: {
-      title: "3단계로 작업 최적화",
-      step1: "앱 다운로드",
-      step2: "단축키 설정",
-      step3: "콘텐츠 선택 후 단축키 누르기",
+    faq: {
+      title: "다운로드 전 자주 묻는 질문",
+
+      q1: "영어 외의 언어로도 쓸 수 있나요",
+      a1: "쓸 수 있습니다. 원하는 어떤 언어로든 사용할 수 있습니다.",
+
+      q2: "OpenAI 계정이나 API 키가 필요한가요",
+      a2: "필요 없습니다. 앱이 알아서 처리합니다.",
+
+      q3: "앱이 제 데이터를 저장하나요",
+      a3: "저장하지 않습니다. 앱은 어떤 내용도 저장하지 않습니다. 다만 텍스트는 ChatGPT를 거치며 OpenAI의 데이터 정책을 따릅니다.",
+
+      q4: "어떤 앱에서 쓸 수 있나요",
+      a4: "모든 앱에서 됩니다. 브라우저, Word, 메일, 채팅 등입니다.",
+
+      q5: "단축키를 바꿀 수 있나요",
+      a5: "바꿀 수 있습니다. 키 조합을 직접 정하고, 단축키마다 직접 프롬프트를 쓸 수 있습니다.",
+
+      q6: "아이폰이나 아이패드에서는 어떻게 쓰나요",
+      a6: "설정에서 AI Shortcut을 키보드로 추가한 뒤 입력 중에 전환하세요.",
+
+      q7: "번역 말고 또 무엇을 할 수 있나요",
+      a7: "프롬프트를 직접 쓸 수 있어서 AI에게 무엇이든 요청할 수 있습니다. 격식 있게 고쳐 쓰기, 문단 의미 분석, 문서 요약 등입니다.",
     },
     privacy: {
       title: "사용자 데이터",
@@ -610,28 +613,29 @@ const translations = {
         description: "用任何语言有效沟通，加强全球联系。",
       },
     },
-    assistant: {
-      title: "为什么它为您服务",
-      interface1: "简单界面：",
-      interface2: "直观的设计，易于理解和使用。",
-      
-      integration1: "多平台集成：",
-      integration2: "与您的Mac/PC/iOS设备上的所有其他应用程序兼容。",
-      
-      instant1: "即时结果：",
-      instant2: "直接在您所在的位置完成任务，无需切换标签。",
-      
-      crossPlatform1: "跨平台：",
-      crossPlatform2: "可在Windows、macOS和iOS设备上使用。",
-      
-      shortcuts1: "个性化快捷键：",
-      shortcuts2: "设置适合您工作流程的快捷键。",
-    },
-    steps: {
-      title: "3个简单步骤优化工作",
-      step1: "下载应用",
-      step2: "设置快捷键",
-      step3: "选择内容并按快捷键",
+    faq: {
+      title: "下载前的常见问题",
+
+      q1: "除了英语，还能用于其他语言吗",
+      a1: "可以。你想用哪种语言都行。",
+
+      q2: "需要 OpenAI 账号或 API 密钥吗",
+      a2: "不需要。应用会替你处理。",
+
+      q3: "应用会保存我的数据吗",
+      a3: "不会。应用不保存你的任何内容。文本会经过 ChatGPT，并遵循 OpenAI 的数据政策。",
+
+      q4: "可以在哪些应用里使用",
+      a4: "所有应用都可以，比如浏览器、Word、邮件、聊天工具。",
+
+      q5: "可以修改快捷键吗",
+      a5: "可以。你能自己设定组合键，并为每个快捷键编写自己的提示词。",
+
+      q6: "在 iPhone 或 iPad 上怎么用",
+      a6: "在设置里把 AI Shortcut 添加为键盘，打字时切换过去即可。",
+
+      q7: "除了翻译，还能做什么",
+      a7: "你可以自己写提示词，所以能让 AI 做任何事，比如改写得更正式、分析段落含义、总结文档。",
     },
     privacy: {
       title: "你的数据",
@@ -725,28 +729,29 @@ const translations = {
         description: "Comunícate efectivamente en cualquier idioma para fortalecer conexiones globales.",
       },
     },
-    assistant: {
-      title: "Por qué funciona para ti",
-      interface1: "Interfaz simple: ",
-      interface2: "Diseño intuitivo, fácil de entender y usar.",
-      
-      integration1: "Integración multiplataforma: ",
-      integration2: "Funciona con todas las demás aplicaciones en tu dispositivo Mac/PC/iOS.",
-      
-      instant1: "Resultados instantáneos: ",
-      instant2: "Completa tareas justo donde estás, sin cambiar de pestañas.",
-      
-      crossPlatform1: "Multiplataforma: ",
-      crossPlatform2: "Disponible en dispositivos Windows, macOS e iOS.",
-      
-      shortcuts1: "Atajos personalizados: ",
-      shortcuts2: "Configura atajos que se adapten a tu flujo de trabajo.",
-    },
-    steps: {
-      title: "Optimiza el trabajo en 3 simples pasos",
-      step1: "Descarga la aplicación",
-      step2: "Configura los atajos",
-      step3: "Selecciona el contenido y presiona el atajo",
+    faq: {
+      title: "Preguntas antes de descargar",
+
+      q1: "¿Puedo usarlo en idiomas que no sean el inglés?",
+      a1: "Sí. Funciona con el idioma que quieras.",
+
+      q2: "¿Necesito una cuenta o una clave API de OpenAI?",
+      a2: "No. La aplicación se encarga de eso por ti.",
+
+      q3: "¿La aplicación guarda mis datos?",
+      a3: "No. La aplicación no guarda ningún contenido tuyo. El texto sí pasa por ChatGPT y sigue la política de datos de OpenAI.",
+
+      q4: "¿En qué aplicaciones funciona?",
+      a4: "En todas: el navegador, Word, el correo, el chat.",
+
+      q5: "¿Puedo cambiar los atajos?",
+      a5: "Sí. Eliges tu combinación de teclas y escribes tu propia instrucción detrás de cada atajo.",
+
+      q6: "¿Cómo se usa en el iPhone o el iPad?",
+      a6: "Añade AI Shortcut como teclado en Ajustes y cambia a él mientras escribes.",
+
+      q7: "¿Qué más hace además de traducir?",
+      a7: "Escribes tus propias instrucciones, así que puedes pedirle cualquier cosa a la IA: reescribir en tono formal, analizar el sentido de un párrafo, resumir un documento.",
     },
     privacy: {
       title: "Tus datos",
@@ -840,28 +845,29 @@ const translations = {
         description: "Kommunizieren Sie effektiv in jeder Sprache, um globale Verbindungen zu stärken.",
       },
     },
-    assistant: {
-      title: "Warum es für Sie funktioniert",
-      interface1: "Einfache Benutzeroberfläche: ",
-      interface2: "Intuitives Design, leicht zu verstehen und zu verwenden.",
-      
-      integration1: "Multi-Plattform-Integration: ",
-      integration2: "Arbeitet mit allen anderen Anwendungen auf Ihrem Mac/PC/iOS-Gerät.",
-      
-      instant1: "Sofortige Ergebnisse: ",
-      instant2: "Schließen Sie Aufgaben genau dort ab, wo Sie sind, ohne Tabs zu wechseln.",
-      
-      crossPlatform1: "Plattformübergreifend: ",
-      crossPlatform2: "Verfügbar auf Windows-, macOS- und iOS-Geräten.",
-      
-      shortcuts1: "Personalisierte Shortcuts: ",
-      shortcuts2: "Richten Sie Shortcuts ein, die zu Ihrem Arbeitsablauf passen.",
-    },
-    steps: {
-      title: "Optimieren Sie die Arbeit in 3 einfachen Schritten",
-      step1: "App herunterladen",
-      step2: "Shortcuts einrichten",
-      step3: "Inhalt auswählen und Shortcut drücken",
+    faq: {
+      title: "Fragen vor dem Download",
+
+      q1: "Kann ich es auch in anderen Sprachen als Englisch nutzen?",
+      a1: "Ja. Es funktioniert mit jeder Sprache, die Sie möchten.",
+
+      q2: "Brauche ich ein OpenAI-Konto oder einen API-Schlüssel?",
+      a2: "Nein. Das übernimmt die App für Sie.",
+
+      q3: "Speichert die App meine Daten?",
+      a3: "Nein. Die App speichert keine Ihrer Inhalte. Der Text läuft allerdings über ChatGPT und unterliegt der Datenrichtlinie von OpenAI.",
+
+      q4: "In welchen Anwendungen funktioniert es?",
+      a4: "In allen: Browser, Word, E-Mail, Chat.",
+
+      q5: "Kann ich die Shortcuts ändern?",
+      a5: "Ja. Sie legen Ihre eigene Tastenkombination fest und schreiben hinter jeden Shortcut Ihren eigenen Prompt.",
+
+      q6: "Wie nutze ich es auf iPhone oder iPad?",
+      a6: "Fügen Sie AI Shortcut in den Einstellungen als Tastatur hinzu und wechseln Sie beim Schreiben dorthin.",
+
+      q7: "Was kann es außer Übersetzen noch?",
+      a7: "Sie schreiben Ihre eigenen Prompts und können die KI deshalb um alles bitten: förmlicher umformulieren, die Bedeutung eines Absatzes analysieren, ein Dokument zusammenfassen.",
     },
     privacy: {
       title: "Ihre Daten",
@@ -955,28 +961,29 @@ const translations = {
         description: "Communiquez efficacement dans n'importe quelle langue pour renforcer les connexions mondiales.",
       },
     },
-    assistant: {
-      title: "Pourquoi ça fonctionne pour vous",
-      interface1: "Interface simple : ",
-      interface2: "Design intuitif, facile à comprendre et à utiliser.",
-      
-      integration1: "Intégration multi-plateforme : ",
-      integration2: "Fonctionne avec toutes les autres applications sur votre appareil Mac/PC/iOS.",
-      
-      instant1: "Résultats instantanés : ",
-      instant2: "Terminez des tâches là où vous êtes, sans changer d'onglet.",
-      
-      crossPlatform1: "Multi-plateforme : ",
-      crossPlatform2: "Disponible sur les appareils Windows, macOS et iOS.",
-      
-      shortcuts1: "Raccourcis personnalisés : ",
-      shortcuts2: "Configurez des raccourcis adaptés à votre flux de travail.",
-    },
-    steps: {
-      title: "Optimisez le travail en 3 étapes simples",
-      step1: "Téléchargez l'application",
-      step2: "Configurez les raccourcis",
-      step3: "Sélectionnez le contenu et appuyez sur le raccourci",
+    faq: {
+      title: "Questions avant de télécharger",
+
+      q1: "Puis-je l'utiliser dans d'autres langues que l'anglais ?",
+      a1: "Oui. Il fonctionne avec la langue de votre choix.",
+
+      q2: "Ai-je besoin d'un compte ou d'une clé API OpenAI ?",
+      a2: "Non. L'application s'en charge pour vous.",
+
+      q3: "L'application conserve-t-elle mes données ?",
+      a3: "Non. L'application ne conserve aucun de vos contenus. Le texte passe toutefois par ChatGPT et suit la politique de données d'OpenAI.",
+
+      q4: "Dans quelles applications fonctionne-t-il ?",
+      a4: "Dans toutes : navigateur, Word, e-mail, messagerie.",
+
+      q5: "Puis-je changer les raccourcis ?",
+      a5: "Oui. Vous choisissez votre combinaison de touches et vous écrivez votre propre instruction derrière chaque raccourci.",
+
+      q6: "Comment l'utiliser sur iPhone ou iPad ?",
+      a6: "Ajoutez AI Shortcut comme clavier dans les Réglages, puis basculez dessus en écrivant.",
+
+      q7: "Que fait-il d'autre que traduire ?",
+      a7: "Vous écrivez vos propres instructions, vous pouvez donc tout demander à l'IA : reformuler de façon plus formelle, analyser le sens d'un paragraphe, résumer un document.",
     },
     privacy: {
       title: "Vos données",

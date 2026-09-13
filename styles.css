@@ -583,10 +583,6 @@ kbd {
     filter: saturate(.88) contrast(.94);
 }
 
-/* Minh hoạ có màu lạnh: kéo về phía ấm cho khớp bảng màu */
-.washed--warm {
-    filter: saturate(.5) sepia(.22) contrast(.95);
-}
 
 /* ============================================================
    Feature rows
@@ -714,105 +710,78 @@ kbd {
 }
 
 /* ============================================================
-   Why it works
+   FAQ
    ============================================================ */
 
-.why-grid {
+.faq-list {
     display: grid;
-    grid-template-columns: 1fr 1.05fr;
-    gap: clamp(40px, 5vw, 80px);
-    align-items: center;
+    gap: var(--space-3);
+    max-width: 82ch;
     margin-top: clamp(48px, 6vw, 80px);
 }
 
-.why-media {
-    padding: var(--space-4);
-    background: var(--color-neutral-100);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-}
-
-.why-media img {
-    width: 100%;
-    border-radius: var(--radius-md);
-}
-
-.features-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-3);
-}
-
-.features-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-4);
-    padding: var(--space-4) var(--space-5);
+.faq-item {
     background: var(--color-neutral-100);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-sm);
-    text-wrap: pretty;
 }
 
-.feature-icon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    margin-top: 4px;
-    color: var(--color-accent);
-}
-
-.features-list .strong {
-    font-weight: 700;
-    color: var(--color-text);
-}
-
-.features-list span span:last-child {
-    color: var(--color-neutral-800);
-}
-
-/* ============================================================
-   3 bước
-   ============================================================ */
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-    margin-top: clamp(48px, 6vw, 80px);
-}
-
-.step {
+.faq-item summary {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: var(--space-4);
-    align-items: flex-start;
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-size: clamp(17px, 1.3vw, 20px);
+    font-weight: 600;
+    color: var(--color-text);
+    text-wrap: pretty;
+    /* Bo tam giac mac dinh cua trinh duyet, dung dau + o ::after */
+    list-style: none;
 }
 
-.step-num {
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 72px;
-    flex-shrink: 0;
     border-radius: var(--radius-pill);
-    background: var(--color-accent);
-    color: var(--color-neutral-100);
-    font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 700;
+    background: var(--color-accent-200);
+    color: var(--color-accent-700);
+    font-size: 22px;
     line-height: 1;
+    transition: background .2s, transform .2s;
 }
 
-.step p {
-    font-family: var(--font-display);
-    font-size: clamp(20px, 1.9vw, 26px);
-    font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: -.5px;
-    color: var(--color-text);
+.faq-item[open] summary::after {
+    content: "−";
+    background: var(--color-accent);
+    color: var(--color-neutral-100);
+}
+
+.faq-item summary:hover::after {
+    transform: scale(1.08);
+}
+
+.faq-item summary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 var(--space-5) var(--space-5);
+    color: var(--color-neutral-800);
     text-wrap: pretty;
 }
 
@@ -1016,7 +985,6 @@ kbd {
 
     .hero-grid,
     .feature-row,
-    .why-grid,
     .cta-panel {
         grid-template-columns: 1fr;
     }
@@ -1025,8 +993,7 @@ kbd {
         order: 0;
     }
 
-    .cards-3,
-    .steps {
+    .cards-3 {
         grid-template-columns: 1fr;
     }
 
@@ -1076,21 +1043,6 @@ kbd {
         aspect-ratio: 16 / 9;
     }
 
-    .steps {
-        gap: var(--space-5);
-    }
-
-    .step {
-        flex-direction: row;
-        align-items: center;
-        gap: var(--space-4);
-    }
-
-    .step-num {
-        width: 56px;
-        height: 56px;
-        font-size: 22px;
-    }
 
     .shortcut-strip {
         width: 100%;
@@ -1149,8 +1101,7 @@ kbd {
         grid-template-columns: 1fr 1.35fr;
     }
 
-    .hero-grid,
-    .why-grid {
+    .hero-grid {
         grid-template-columns: 1fr 1.15fr;
     }
 }
