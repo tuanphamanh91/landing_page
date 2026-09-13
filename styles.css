@@ -645,10 +645,14 @@ kbd {
 }
 
 .feature-card-img {
+    display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: var(--radius-sm);
+    /* Nen giu cho trong luc video chua tai xong */
+    background: var(--color-neutral-200);
 }
 
 /* ============================================================

@@ -1,67 +1,67 @@
 const rawImages = {
   en: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
   vi: {
-    hero2: "assets/imgs/hero2-vi.png",
-    translation: "assets/imgs/Gif_trans.gif",
-    summarize: "assets/imgs/Gif_sum.gif",
-    communication: "assets/imgs/Gif_mail.gif",
-    english: "assets/imgs/Gif_gram.gif",
-    customize_prompt: "assets/imgs/CustomPromptVi.gif",
+    hero2: "assets/imgs/hero2-vi.webp",
+    translation: "assets/vid/Gif_trans.mp4",
+    summarize: "assets/vid/Gif_sum.mp4",
+    communication: "assets/vid/Gif_mail.mp4",
+    english: "assets/vid/Gif_gram.mp4",
+    customize_prompt: "assets/vid/CustomPromptVi.mp4",
   },
   ja: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
   ko: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
   zh: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
   es: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
   de: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
   fr: {
-    hero2: "assets/imgs/hero2-en.png",
-    translation: "assets/imgs/Translate.gif",
-    summarize: "assets/imgs/Summarize.gif",
-    communication: "assets/imgs/Email.gif",
-    english: "assets/imgs/Analyze.gif",
-    customize_prompt: "assets/imgs/CustomPromptEn.gif",
+    hero2: "assets/imgs/hero2-en.webp",
+    translation: "assets/vid/Translate.mp4",
+    summarize: "assets/vid/Summarize.mp4",
+    communication: "assets/vid/Email.mp4",
+    english: "assets/vid/Analyze.mp4",
+    customize_prompt: "assets/vid/CustomPromptEn.mp4",
   },
 };
 
@@ -1051,37 +1051,91 @@ function changeLanguage() {
   // Get images for the selected language, fallback to English if not available
   const selectedImages = rawImages[lang] || rawImages["en"];
 
-  // Change image sources
-  document.getElementById("translation").src = selectedImages.translation;
-  document.getElementById("summarize").src = selectedImages.summarize;
-  document.getElementById("communication").src = selectedImages.communication;
-  document.getElementById("english").src = selectedImages.english;
-  document.getElementById("hero2").src = selectedImages.hero2;
-  document.getElementById("customize_prompt").src = selectedImages.customize_prompt;
+  // Anh hero doi truc tiep
+  const hero2 = document.getElementById("hero2");
+  if (hero2) hero2.src = selectedImages.hero2;
+
+  // Video minh hoa: chi ghi vao data-src, IntersectionObserver ben duoi moi tai
+  // that su khi nguoi dung cuon toi. Tranh tai ca bo video cua ngon ngu khong dung.
+  ["translation", "summarize", "communication", "english", "customize_prompt"].forEach(
+    (key) => {
+      const el = document.getElementById(key);
+      if (!el) return;
+      const mp4 = selectedImages[key];
+      if (!mp4 || el.dataset.src === mp4) return;
+      el.dataset.src = mp4;
+      el.dataset.poster = mp4.replace(/\.mp4$/, ".webp");
+      if (el.dataset.loaded === "1") {
+        el.poster = el.dataset.poster;
+        // Da tai roi -> doi nguon ngay cho khop ngon ngu moi
+        el.src = mp4;
+        el.load();
+        el.play().catch(() => {});
+      }
+    }
+  );
+}
+
+// Chi tai video khi sap loi vao khung nhin. Day la thay doi quan trong nhat ve
+// toc do: truoc day trang tai ~20MB GIF ngay tu dau, chan ca banner o hero.
+function initLazyVideos() {
+  const videos = Array.from(document.querySelectorAll("video[data-src]"));
+  if (!videos.length) return;
+
+  const load = (el) => {
+    if (el.dataset.loaded === "1" || !el.dataset.src) return;
+    el.dataset.loaded = "1";
+    if (el.dataset.poster) el.poster = el.dataset.poster;
+    el.src = el.dataset.src;
+    el.load();
+    el.play().catch(() => {});
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    videos.forEach(load);
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        load(entry.target);
+        io.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "300px 0px" }
+  );
+  videos.forEach((el) => io.observe(el));
 }
 
 // Set default language
-window.onload = function () {
-  const browserLang = navigator.language || navigator.userLanguage;
+// Chay ngay khi DOM san sang. Truoc day dung window.onload nen toan bo chu tren
+// trang phai doi MOI anh tai xong moi hien -> LCP len toi 49 giay.
+function initPage() {
+  const browserLang = navigator.language || navigator.userLanguage || "en";
   const primaryLang = browserLang.split("-")[0];
-  
+  const select = document.getElementById("langSelect");
+
   // Check if the primary language is supported
-  if (translations[primaryLang]) {
-    document.getElementById("langSelect").value = primaryLang;
-  } else {
-    document.getElementById("langSelect").value = "en";
+  if (select) {
+    select.value = translations[primaryLang] ? primaryLang : "en";
   }
   changeLanguage();
-};
+  initLazyVideos();
+  initHeroRotation();
+}
 
-const images = document.querySelectorAll(".hero-img-image");
-let currentIndex = 0;
-
-setInterval(() => {
-  images[currentIndex].classList.remove("active");
-  currentIndex = (currentIndex + 1) % images.length;
-  images[currentIndex].classList.add("active");
-}, 6000);
+function initHeroRotation() {
+  const images = document.querySelectorAll(".hero-img-image");
+  if (images.length < 2) return;
+  let currentIndex = 0;
+  setInterval(() => {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+  }, 6000);
+}
 
 // Nut store xuat hien o ca hero va CTA cuoi trang (id "...-2")
 ["download-mac", "download-ios", "download-win"].forEach((name) => {
@@ -1100,3 +1154,9 @@ setInterval(() => {
     }
   });
 });
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPage);
+} else {
+  initPage();
+}

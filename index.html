@@ -9,7 +9,19 @@
 	<meta name="description" content="Use AI to translate and rewrite content with just one shortcut.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+	<!-- Nap font khong chan render: trinh duyet ve chu bang font he thong truoc, doi sau -->
+	<link rel="stylesheet" media="print" onload="this.media='all'"
+		href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap">
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap">
+	</noscript>
+
+	<!-- Anh banner hero: uu tien cao nhat de hien som -->
+	<link rel="preload" as="image" href="assets/imgs/pg1a.webp" fetchpriority="high">
+
+	<!-- Nap som + defer: chu tren trang duoc dien ngay khi DOM xong, khong cho anh -->
+	<script defer src="./translations.js"></script>
 	<meta name="theme-color" content="#f5ead8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -49,7 +61,7 @@
 	<header class="site-header">
 		<div class="header-inner">
 			<div class="brand">
-				<img src="assets/playstore.png" alt="AI Shortcut" width="44" height="44">
+				<img src="assets/logo.webp" alt="AI Shortcut" width="44" height="44" decoding="async">
 				<span>AI SHORTCUT</span>
 			</div>
 
@@ -84,8 +96,9 @@
 					<span class="tag tag-outline">iOS</span>
 				</div>
 
-				<h1 class="hero-title translate" data-key="hero.slogan">.</h1>
-				<p class="lead translate" data-key="hero.description"></p>
+				<h1 class="hero-title translate" data-key="hero.slogan">Quick translation with one shortcut</h1>
+				<p class="lead translate" data-key="hero.description">Effortlessly translate, rewrite, communicate, and
+					summarize documents using the power of AI.</p>
 
 				<div class="shortcut-strip">
 					<span class="keycaps">
@@ -95,12 +108,13 @@
 					</span>
 					<span class="shortcut-arrow" aria-hidden="true">→</span>
 					<span class="shortcut-result">
-						<img src="assets/playstore.png" alt="" width="30" height="30">
+						<img src="assets/logo.webp" alt="" width="30" height="30" loading="lazy" decoding="async">
 						AI Shortcut
 					</span>
 				</div>
 
-				<p class="hero-note translate" data-key="hero.how_it_works"></p>
+				<p class="hero-note translate" data-key="hero.how_it_works">Select the text, press the shortcut. No
+					copy-paste, no switching windows.</p>
 
 				<div class="hero-cta">
 					<p class="hero-cta-label translate" data-key="hero.cta">Download for free now</p>
@@ -142,8 +156,10 @@
 			</div>
 
 			<div class="hero-media">
-				<img class="hero-img-image washed active" src="assets/imgs/pg1a.png" alt="AI Shortcut">
-				<img id="hero2" class="hero-img-image washed" src="assets/imgs/hero2-en.png" alt="AI Shortcut">
+				<img class="hero-img-image washed active" src="assets/imgs/pg1a.webp" alt="AI Shortcut"
+					width="1624" height="718" fetchpriority="high" decoding="async">
+				<img id="hero2" class="hero-img-image washed" src="assets/imgs/hero2-en.webp" alt="AI Shortcut"
+					width="691" height="372" fetchpriority="low" decoding="async">
 			</div>
 		</div>
 	</section>
@@ -165,8 +181,9 @@
 						<p class="translate" data-key="efficiency.translation.description"></p>
 					</div>
 					<figure class="feature-media">
-						<img id="translation" class="feature-card-img washed" src="assets/imgs/Gif_trans.gif"
-							alt="Translation">
+						<video id="translation" class="feature-card-img washed" data-src="assets/vid/Gif_trans.mp4"
+							data-poster="assets/vid/Gif_trans.webp" width="1920" height="1080" preload="none"
+							autoplay muted loop playsinline aria-label="Translation"></video>
 					</figure>
 				</article>
 
@@ -177,8 +194,9 @@
 						<p class="translate" data-key="efficiency.summarize.description"></p>
 					</div>
 					<figure class="feature-media">
-						<img id="summarize" class="feature-card-img washed" src="assets/imgs/Gif_sum.gif"
-							alt="Summarize">
+						<video id="summarize" class="feature-card-img washed" data-src="assets/vid/Gif_sum.mp4"
+							data-poster="assets/vid/Gif_sum.webp" width="1920" height="1080" preload="none"
+							autoplay muted loop playsinline aria-label="Summarize"></video>
 					</figure>
 				</article>
 
@@ -189,8 +207,9 @@
 						<p class="translate" data-key="efficiency.communication.description"></p>
 					</div>
 					<figure class="feature-media">
-						<img id="communication" class="feature-card-img washed" src="assets/imgs/Gif_mail.gif"
-							alt="Communicate">
+						<video id="communication" class="feature-card-img washed" data-src="assets/vid/Gif_mail.mp4"
+							data-poster="assets/vid/Gif_mail.webp" width="1920" height="1080" preload="none"
+							autoplay muted loop playsinline aria-label="Communicate"></video>
 					</figure>
 				</article>
 
@@ -201,8 +220,9 @@
 						<p class="translate" data-key="efficiency.learn_english.description"></p>
 					</div>
 					<figure class="feature-media">
-						<img id="english" class="feature-card-img washed" src="assets/imgs/Gif_gram.gif"
-							alt="Learn English">
+						<video id="english" class="feature-card-img washed" data-src="assets/vid/Gif_gram.mp4"
+							data-poster="assets/vid/Gif_gram.webp" width="1920" height="1080" preload="none"
+							autoplay muted loop playsinline aria-label="Learn English"></video>
 					</figure>
 				</article>
 
@@ -213,8 +233,9 @@
 						<p class="translate" data-key="efficiency.customize_prompt.description"></p>
 					</div>
 					<figure class="feature-media">
-						<img id="customize_prompt" class="feature-card-img washed" src="assets/imgs/CustomPromptEn.gif"
-							alt="Customize prompt">
+						<video id="customize_prompt" class="feature-card-img washed" data-src="assets/vid/CustomPromptEn.mp4"
+							data-poster="assets/vid/CustomPromptEn.webp" width="1920" height="1080" preload="none"
+							autoplay muted loop playsinline aria-label="Customize prompt"></video>
 					</figure>
 				</article>
 			</div>
@@ -232,7 +253,8 @@
 
 			<div class="why-grid">
 				<div class="why-media">
-					<img class="washed washed--warm" src="assets/imgs/Youll-be-more-productive.png" alt="AI Shortcut">
+					<img class="washed washed--warm" src="assets/imgs/Youll-be-more-productive.webp" alt="AI Shortcut"
+						width="640" height="499" loading="lazy" decoding="async">
 				</div>
 
 				<ul class="features-list">
@@ -325,7 +347,8 @@
 						</svg>
 						<span>
 							<span class="kicker translate" data-key="privacy.title">Your data</span>
-							<span class="translate" data-key="privacy.body"></span>
+							<span class="translate" data-key="privacy.body">AI Shortcut stores none of the content you process.
+								Text goes straight to ChatGPT and follows OpenAI's data policy.</span>
 						</span>
 					</div>
 				</div>
@@ -373,7 +396,7 @@
 		<div class="footer-inner">
 			<div class="footer-content">
 				<div class="footer-brand">
-					<img src="assets/playstore.png" alt="AI Shortcut" width="48" height="48">
+					<img src="assets/logo.webp" alt="AI Shortcut" width="48" height="48" loading="lazy" decoding="async">
 					<h3>AI SHORTCUT</h3>
 					<p class="translate" data-key="footer.tagline">Boost your productivity with AI</p>
 					<span class="copyright">© 2023-2026 AIShortcut</span>
@@ -447,7 +470,6 @@
 			</div>
 		</div>
 	</footer>
-	<script type="text/javascript" src="./translations.js"></script>
 </body>
 
 </html>
