@@ -13,16 +13,37 @@
 	<meta name="theme-color" content="#f5ead8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLYEMN5RMB"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
 
-	gtag('config', 'G-FLYEMN5RMB');
-</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLYEMN5RMB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-FLYEMN5RMB');
+	</script>
+
+	<!-- Google tag (gtag.js) event - delayed navigation helper -->
+	<script>
+		// Helper function to delay opening a URL until a gtag event is sent.
+		// Call it in response to an action that should navigate to a URL.
+		// Cac nut store mo tab moi (target="_blank") nen goi gtagSendEvent()
+		// khong tham so: trang hien tai van song, khong can doi dieu huong.
+		function gtagSendEvent(url) {
+			var callback = function () {
+				if (typeof url === 'string') {
+					window.location = url;
+				}
+			};
+			gtag('event', 'download-win', {
+				'event_callback': callback,
+				'event_timeout': 2000,
+			});
+			return false;
+		}
+	</script>
+</head>
 
 <body>
 	<header class="site-header">

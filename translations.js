@@ -1089,8 +1089,13 @@ setInterval(() => {
     const el = document.getElementById(id);
     if (el) {
       el.addEventListener("click", function () {
-        console.log(name);
-        gtag("event", name);
+        // Nut Windows la muc tieu chuyen doi cua Google Ads -> dung helper cua Google.
+        // Khong truyen url vi link mo tab moi, trang hien tai khong bi unload.
+        if (name === "download-win" && typeof gtagSendEvent === "function") {
+          gtagSendEvent();
+        } else {
+          gtag("event", name);
+        }
       });
     }
   });
