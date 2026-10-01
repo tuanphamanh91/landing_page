@@ -1120,8 +1120,11 @@ function initLazyVideos() {
 // Chay ngay khi DOM san sang. Truoc day dung window.onload nen toan bo chu tren
 // trang phai doi MOI anh tai xong moi hien -> LCP len toi 49 giay.
 function initPage() {
+  // Uu tien ngon ngu truyen qua URL (?lang=vi). Dung cho quang cao de khoa
+  // trang ve dung 1 ngon ngu bat ke ngon ngu trinh duyet cua nguoi dung.
+  const urlLang = new URLSearchParams(window.location.search).get("lang");
   const browserLang = navigator.language || navigator.userLanguage || "en";
-  const primaryLang = browserLang.split("-")[0];
+  const primaryLang = (urlLang || browserLang).split("-")[0];
   const select = document.getElementById("langSelect");
 
   // Check if the primary language is supported
