@@ -20,16 +20,16 @@
 	<meta property="og:url" content="https://aishortcut.info/">
 	<meta property="og:title" content="AI Shortcut - Quick translation with one shortcut">
 	<meta property="og:description" content="Use AI to translate and rewrite content with just one shortcut.">
-	<meta property="og:image" content="https://aishortcut.info/assets/imgs/pg1a.webp">
-	<meta property="og:image:width" content="1624">
-	<meta property="og:image:height" content="718">
+	<meta property="og:image" content="https://aishortcut.info/assets/vid/hero.webp">
+	<meta property="og:image:width" content="1280">
+	<meta property="og:image:height" content="720">
 	<meta property="og:site_name" content="AI Shortcut">
 
 	<!-- Twitter / X card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="AI Shortcut - Quick translation with one shortcut">
 	<meta name="twitter:description" content="Use AI to translate and rewrite content with just one shortcut.">
-	<meta name="twitter:image" content="https://aishortcut.info/assets/imgs/pg1a.webp">
+	<meta name="twitter:image" content="https://aishortcut.info/assets/vid/hero.webp">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +41,8 @@
 			href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;600;700&display=swap">
 	</noscript>
 
-	<!-- Anh banner hero: uu tien cao nhat de hien som -->
-	<link rel="preload" as="image" href="assets/imgs/pg1a.webp" fetchpriority="high">
+	<!-- Poster video hero: uu tien cao nhat de hien som (LCP) -->
+	<link rel="preload" as="image" href="assets/vid/hero.webp" fetchpriority="high">
 
 	<!-- Nap som + defer: chu tren trang duoc dien ngay khi DOM xong, khong cho anh -->
 	<script defer src="./translations.js"></script>
@@ -177,10 +177,11 @@
 			</div>
 
 			<div class="hero-media">
-				<img class="hero-img-image washed active" src="assets/imgs/pg1a.webp" alt="AI Shortcut"
-					width="1624" height="718" fetchpriority="high" decoding="async">
-				<img id="hero2" class="hero-img-image washed" src="assets/imgs/hero2-en.webp" alt="AI Shortcut"
-					width="691" height="372" fetchpriority="low" decoding="async">
+				<!-- Demo that: boi den chu -> bam phim tat -> ra ket qua. Lazy-load qua
+				     data-src giong video tinh nang; poster hien ngay de giu LCP/CLS. -->
+				<video id="hero-video" class="hero-video washed" poster="assets/vid/hero.webp"
+					data-src="assets/vid/hero.mp4" width="1280" height="720" preload="none" autoplay muted loop
+					playsinline aria-label="AI Shortcut summarize and translate demo"></video>
 			</div>
 		</div>
 	</section>
@@ -211,19 +212,6 @@
 				<article class="feature-row feature-row--flip">
 					<div class="feature-copy">
 						<p class="kicker">02</p>
-						<h3 class="translate" data-key="efficiency.summarize.title">Summarize</h3>
-						<p class="translate" data-key="efficiency.summarize.description"></p>
-					</div>
-					<figure class="feature-media">
-						<video id="summarize" class="feature-card-img washed" data-src="assets/vid/Gif_sum.mp4"
-							data-poster="assets/vid/Gif_sum.webp" width="1920" height="1080" preload="none"
-							autoplay muted loop playsinline aria-label="Summarize"></video>
-					</figure>
-				</article>
-
-				<article class="feature-row">
-					<div class="feature-copy">
-						<p class="kicker">03</p>
 						<h3 class="translate" data-key="efficiency.communication.title">Communicate</h3>
 						<p class="translate" data-key="efficiency.communication.description"></p>
 					</div>
@@ -234,9 +222,9 @@
 					</figure>
 				</article>
 
-				<article class="feature-row feature-row--flip">
+				<article class="feature-row">
 					<div class="feature-copy">
-						<p class="kicker">04</p>
+						<p class="kicker">03</p>
 						<h3 class="translate" data-key="efficiency.learn_english.title">Learn English</h3>
 						<p class="translate" data-key="efficiency.learn_english.description"></p>
 					</div>
@@ -244,6 +232,19 @@
 						<video id="english" class="feature-card-img washed" data-src="assets/vid/Gif_gram.mp4"
 							data-poster="assets/vid/Gif_gram.webp" width="1920" height="1080" preload="none"
 							autoplay muted loop playsinline aria-label="Learn English"></video>
+					</figure>
+				</article>
+
+				<article class="feature-row feature-row--flip">
+					<div class="feature-copy">
+						<p class="kicker">04</p>
+						<h3 class="translate" data-key="efficiency.summarize.title">Summarize</h3>
+						<p class="translate" data-key="efficiency.summarize.description"></p>
+					</div>
+					<figure class="feature-media">
+						<video id="summarize" class="feature-card-img washed" data-src="assets/vid/Gif_sum.mp4"
+							data-poster="assets/vid/Gif_sum.webp" width="1920" height="1080" preload="none"
+							autoplay muted loop playsinline aria-label="Summarize"></video>
 					</figure>
 				</article>
 
@@ -263,7 +264,78 @@
 		</div>
 	</section>
 
-	<!-- ===================== VÌ SAO HỢP VỚI BẠN ===================== -->
+	<!-- ===================== KHÁCH HÀNG NHẬN XÉT ===================== -->
+	<section class="section testimonials">
+		<span class="blob blob--sage blob--bottom-left" aria-hidden="true"></span>
+		<div class="section-inner">
+			<div class="section-head">
+				<p class="tag">Reviews</p>
+				<h2 class="section-title translate" data-key="testimonials.title">Loved by real users</h2>
+			</div>
+
+			<div class="testimonial-grid">
+				<blockquote class="testimonial-card testimonial-card--featured">
+					<div class="testimonial-featured-copy">
+						<p class="testimonial-quote translate" data-key="testimonials.featured">Honestly, I think this is a
+							seriously good app — it uses AI to streamline everyday work, and it's built by a Vietnamese
+							developer. The other day I even wrote a post recommending it in my group chat.</p>
+						<footer class="testimonial-author">
+							<span class="testimonial-avatar" aria-hidden="true">&#8220;</span>
+							<span class="translate" data-key="testimonials.featured_author">Shared in a community group</span>
+						</footer>
+					</div>
+					<!-- Anh chup tin nhan that: chi hien o ban tieng Viet (noi dung chat la tieng Viet) -->
+					<img class="testimonial-proof vi-only" src="assets/imgs/review-vi.webp"
+						alt="Tin nhắn thật của khách hàng giới thiệu AI Shortcut" width="480" height="1039"
+						loading="lazy" decoding="async">
+				</blockquote>
+
+				<blockquote class="testimonial-card">
+					<p class="testimonial-quote translate" data-key="testimonials.t1">This app is so convenient to use.</p>
+					<footer class="testimonial-author">
+						<span class="testimonial-avatar" aria-hidden="true">&#8220;</span>
+						<span class="translate" data-key="testimonials.t1_author">Happy user</span>
+					</footer>
+				</blockquote>
+
+				<blockquote class="testimonial-card">
+					<p class="testimonial-quote translate" data-key="testimonials.t2">So handy and well made — it saves me
+						so much time!</p>
+					<footer class="testimonial-author">
+						<span class="testimonial-avatar" aria-hidden="true">&#8220;</span>
+						<span class="translate" data-key="testimonials.t2_author">Happy user</span>
+					</footer>
+				</blockquote>
+
+				<blockquote class="testimonial-card">
+					<p class="testimonial-quote translate" data-key="testimonials.t3">I got used to it in no time and now
+						I'm hooked — can't stop using it!</p>
+					<footer class="testimonial-author">
+						<span class="testimonial-avatar" aria-hidden="true">&#8220;</span>
+						<span class="translate" data-key="testimonials.t3_author">Daily user</span>
+					</footer>
+				</blockquote>
+
+				<blockquote class="testimonial-card">
+					<p class="testimonial-quote translate" data-key="testimonials.t4">I've switched to writing all my
+						captions with the app.</p>
+					<footer class="testimonial-author">
+						<span class="testimonial-avatar" aria-hidden="true">&#8220;</span>
+						<span class="translate" data-key="testimonials.t4_author">Content creator</span>
+					</footer>
+				</blockquote>
+
+				<blockquote class="testimonial-card">
+					<p class="testimonial-quote translate" data-key="testimonials.t5">I love using it on macOS!</p>
+					<footer class="testimonial-author">
+						<span class="testimonial-avatar" aria-hidden="true">&#8220;</span>
+						<span class="translate" data-key="testimonials.t5_author">macOS user</span>
+					</footer>
+				</blockquote>
+			</div>
+		</div>
+	</section>
+
 	<!-- ===================== FAQ ===================== -->
 	<section class="section section--dark faq">
 		<span class="blob blob--right" aria-hidden="true"></span>

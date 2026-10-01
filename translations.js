@@ -128,6 +128,21 @@ const translations = {
           "Communicate effectively in any language to strengthen global connections.",
       },
     },
+    testimonials: {
+      title: "Loved by real users",
+      featured: "Honestly, I think this is a seriously good app — it uses AI to streamline everyday work, and it's built by a Vietnamese developer. The other day I even wrote a post recommending it in my group chat.",
+      featured_author: "Shared in a community group",
+      t1: "This app is so convenient to use.",
+      t1_author: "Happy user",
+      t2: "So handy and well made — it saves me so much time!",
+      t2_author: "Happy user",
+      t3: "I got used to it in no time and now I'm hooked — can't stop using it!",
+      t3_author: "Daily user",
+      t4: "I've switched to writing all my captions with the app.",
+      t4_author: "Content creator",
+      t5: "I love using it on macOS!",
+      t5_author: "macOS user",
+    },
     faq: {
       title: "Questions before you download",
 
@@ -253,6 +268,21 @@ const translations = {
         description:
           "Hỗ trợ giao tiếp đa ngôn ngữ để xây dựng mối quan hệ thuận lợi.",
       },
+    },
+    testimonials: {
+      title: "Khách hàng nói gì về AI Shortcut",
+      featured: "Mình đánh giá đây là một app khá xịn, tích hợp AI để tối ưu hóa xử lý công việc — và được phát triển bởi người Việt. Hôm trước mình còn lên hẳn một bài PR cho app trên nhóm chat chung.",
+      featured_author: "Chia sẻ từ cộng đồng",
+      t1: "App dùng tiện lợi thật sự.",
+      t1_author: "Người dùng",
+      t2: "Tiện lợi và xịn quá, tiết kiệm được bao nhiêu thời gian!",
+      t2_author: "Người dùng",
+      t3: "Dùng quen tay rồi, nghiện mất rồi, không bỏ được shop ơi!",
+      t3_author: "Khách hàng thân thiết",
+      t4: "Em chuyển hẳn sang viết caption bằng app của shop luôn.",
+      t4_author: "Nhà sáng tạo nội dung",
+      t5: "Em dùng trên macOS thích quá!",
+      t5_author: "Người dùng macOS",
     },
     faq: {
       title: "Câu hỏi trước khi tải",
@@ -380,6 +410,21 @@ const translations = {
           "どんな言語でも効果的にコミュニケーションを取り、世界的なつながりを強化できます。",
       },
     },
+    testimonials: {
+      title: "ユーザーの声",
+      featured: "これは本当に優れたアプリだと思います。AIを活用して日々の作業を効率化してくれます。先日はグループチャットでおすすめの投稿までしてしまいました。",
+      featured_author: "コミュニティでのシェア",
+      t1: "とても使いやすいアプリです。",
+      t1_author: "ユーザー",
+      t2: "便利で完成度が高く、時間がすごく節約できます！",
+      t2_author: "ユーザー",
+      t3: "すぐに慣れて、もう手放せません！",
+      t3_author: "愛用者",
+      t4: "キャプションはすべてこのアプリで書くようになりました。",
+      t4_author: "コンテンツクリエイター",
+      t5: "macOSで使っていて最高です！",
+      t5_author: "macOSユーザー",
+    },
     faq: {
       title: "ダウンロード前によくある質問",
 
@@ -497,6 +542,21 @@ const translations = {
         description: "어떤 언어로든 효과적으로 의사소통하여 글로벌 연결을 강화하세요.",
       },
     },
+    testimonials: {
+      title: "사용자들의 후기",
+      featured: "정말 괜찮은 앱이라고 생각해요. AI를 활용해 업무 처리를 효율적으로 만들어 줍니다. 얼마 전엔 단체 채팅방에 추천 글까지 올렸어요.",
+      featured_author: "커뮤니티 공유",
+      t1: "정말 사용하기 편리한 앱이에요.",
+      t1_author: "사용자",
+      t2: "편리하고 완성도가 높아서 시간을 정말 많이 아끼었어요!",
+      t2_author: "사용자",
+      t3: "금방 익숙해져서 이제 없으면 안 돼요!",
+      t3_author: "애용자",
+      t4: "이제 캡션은 전부 이 앱으로 써요.",
+      t4_author: "콘텐츠 크리에이터",
+      t5: "macOS에서 쓰는데 너무 좋아요!",
+      t5_author: "macOS 사용자",
+    },
     faq: {
       title: "다운로드 전 자주 묻는 질문",
 
@@ -612,6 +672,21 @@ const translations = {
         title: "国际关系",
         description: "用任何语言有效沟通，加强全球联系。",
       },
+    },
+    testimonials: {
+      title: "用户怎么说",
+      featured: "我觉得这是一款相当出色的应用，用 AI 来优化日常工作处理。前几天我还在群聊里发了一篇推荐它的帖子。",
+      featured_author: "来自社区的分享",
+      t1: "这个应用用起来太方便了。",
+      t1_author: "用户",
+      t2: "又方便又好用，节省了好多时间！",
+      t2_author: "用户",
+      t3: "很快就上手了，现在离不开它了！",
+      t3_author: "忠实用户",
+      t4: "我现在写文案都改用这个应用了。",
+      t4_author: "内容创作者",
+      t5: "在 macOS 上用着太喜欢了！",
+      t5_author: "macOS 用户",
     },
     faq: {
       title: "下载前的常见问题",
@@ -729,6 +804,21 @@ const translations = {
         description: "Comunícate efectivamente en cualquier idioma para fortalecer conexiones globales.",
       },
     },
+    testimonials: {
+      title: "Lo que dicen los usuarios",
+      featured: "Creo que es una app realmente buena: usa IA para optimizar el trabajo del día a día. El otro día hasta publiqué una recomendación en mi chat grupal.",
+      featured_author: "Compartido en la comunidad",
+      t1: "Esta app es súper cómoda de usar.",
+      t1_author: "Usuario",
+      t2: "¡Qué práctica y bien hecha, me ahorra muchísimo tiempo!",
+      t2_author: "Usuario",
+      t3: "Me acostumbré enseguida y ya no puedo dejarla.",
+      t3_author: "Usuario fiel",
+      t4: "Ahora escribo todos mis captions con la app.",
+      t4_author: "Creador de contenido",
+      t5: "¡Me encanta usarla en macOS!",
+      t5_author: "Usuario de macOS",
+    },
     faq: {
       title: "Preguntas antes de descargar",
 
@@ -844,6 +934,21 @@ const translations = {
         title: "Internationale Beziehungen",
         description: "Kommunizieren Sie effektiv in jeder Sprache, um globale Verbindungen zu stärken.",
       },
+    },
+    testimonials: {
+      title: "Das sagen unsere Nutzer",
+      featured: "Ich finde, das ist eine richtig gute App — sie nutzt KI, um die tägliche Arbeit zu optimieren. Neulich habe ich sogar einen Empfehlungs-Post in meinem Gruppenchat geschrieben.",
+      featured_author: "Geteilt in der Community",
+      t1: "Diese App ist super praktisch.",
+      t1_author: "Nutzer",
+      t2: "So praktisch und gut gemacht — spart mir enorm viel Zeit!",
+      t2_author: "Nutzer",
+      t3: "Ich habe mich schnell daran gewöhnt und kann nicht mehr ohne.",
+      t3_author: "Treuer Nutzer",
+      t4: "Ich schreibe inzwischen alle meine Captions mit der App.",
+      t4_author: "Content-Creator",
+      t5: "Ich liebe es, sie auf macOS zu nutzen!",
+      t5_author: "macOS-Nutzer",
     },
     faq: {
       title: "Fragen vor dem Download",
@@ -961,6 +1066,21 @@ const translations = {
         description: "Communiquez efficacement dans n'importe quelle langue pour renforcer les connexions mondiales.",
       },
     },
+    testimonials: {
+      title: "Ce que disent les utilisateurs",
+      featured: "Je trouve que c'est une appli vraiment excellente : elle utilise l'IA pour optimiser le travail au quotidien. L'autre jour, j'ai même publié un post pour la recommander dans mon chat de groupe.",
+      featured_author: "Partagé dans la communauté",
+      t1: "Cette appli est tellement pratique à utiliser.",
+      t1_author: "Utilisateur",
+      t2: "Tellement pratique et bien faite — elle me fait gagner un temps fou !",
+      t2_author: "Utilisateur",
+      t3: "Je m'y suis habitué très vite et je ne peux plus m'en passer.",
+      t3_author: "Utilisateur fidèle",
+      t4: "J'écris désormais toutes mes légendes avec l'appli.",
+      t4_author: "Créateur de contenu",
+      t5: "J'adore l'utiliser sur macOS !",
+      t5_author: "Utilisateur macOS",
+    },
     faq: {
       title: "Questions avant de télécharger",
 
@@ -1058,9 +1178,21 @@ function changeLanguage() {
   // Get images for the selected language, fallback to English if not available
   const selectedImages = rawImages[lang] || rawImages["en"];
 
-  // Anh hero doi truc tiep
-  const hero2 = document.getElementById("hero2");
-  if (hero2) hero2.src = selectedImages.hero2;
+  // Hero video doi theo ngon ngu: tieng Viet dung ban tomtat (nhan tieng Viet),
+  // cac ngon ngu khac dung ban Summarize (nhan tieng Anh).
+  const heroVideo = document.getElementById("hero-video");
+  if (heroVideo) {
+    const heroMp4 = lang === "vi" ? "assets/vid/hero.mp4" : "assets/vid/hero-en.mp4";
+    heroVideo.poster = heroMp4.replace(/\.mp4$/, ".webp");
+    if (heroVideo.dataset.src !== heroMp4) {
+      heroVideo.dataset.src = heroMp4;
+      if (heroVideo.dataset.loaded === "1") {
+        heroVideo.src = heroMp4;
+        heroVideo.load();
+        heroVideo.play().catch(() => {});
+      }
+    }
+  }
 
   // Video minh hoa: chi ghi vao data-src, IntersectionObserver ben duoi moi tai
   // that su khi nguoi dung cuon toi. Tranh tai ca bo video cua ngon ngu khong dung.
@@ -1133,18 +1265,6 @@ function initPage() {
   }
   changeLanguage();
   initLazyVideos();
-  initHeroRotation();
-}
-
-function initHeroRotation() {
-  const images = document.querySelectorAll(".hero-img-image");
-  if (images.length < 2) return;
-  let currentIndex = 0;
-  setInterval(() => {
-    images[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add("active");
-  }, 6000);
 }
 
 // Nut store xuat hien o ca hero va CTA cuoi trang (id "...-2")
