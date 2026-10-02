@@ -1153,6 +1153,10 @@ function getNestedTranslation(obj, path) {
   }, obj);
 }
 
+// File cai dat Windows cho ban tieng Viet (tai truc tiep, khong qua Store)
+const WIN_VN_SETUP_URL =
+  "https://aishortcut-3b9a6.web.app/updates/AIShortcut-VN-Setup-1.0.1.exe";
+
 function changeLanguage() {
   const lang = document.getElementById("langSelect").value;
   const texts = translations[lang];
@@ -1177,6 +1181,20 @@ function changeLanguage() {
 
   // Get images for the selected language, fallback to English if not available
   const selectedImages = rawImages[lang] || rawImages["en"];
+
+  // Ban tieng Viet tai thang file cai dat .exe thay vi Microsoft Store.
+  // Luu link store goc vao data-store-href de doi lai khi chuyen ngon ngu khac.
+  const isVi = lang === "vi";
+  document.querySelectorAll("[data-win-link]").forEach((a) => {
+    if (!a.dataset.storeHref) a.dataset.storeHref = a.getAttribute("href");
+    a.href = isVi ? WIN_VN_SETUP_URL : a.dataset.storeHref;
+  });
+  document.querySelectorAll(".microsoft-store").forEach((btn) => {
+    const top = btn.querySelector(".win-label-top");
+    const main = btn.querySelector(".win-label-main");
+    if (top) top.textContent = isVi ? "Tải về cho" : "Available at";
+    if (main) main.textContent = isVi ? "WINDOWS" : "WINDOWS STORE";
+  });
 
   // Hero video doi theo ngon ngu: tieng Viet dung ban tomtat (nhan tieng Viet),
   // cac ngon ngu khac dung ban Summarize (nhan tieng Anh).
