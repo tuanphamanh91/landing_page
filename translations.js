@@ -1155,7 +1155,7 @@ function getNestedTranslation(obj, path) {
 
 // File cai dat Windows cho ban tieng Viet (tai truc tiep, khong qua Store)
 const WIN_VN_SETUP_URL =
-  "https://aishortcut-3b9a6.web.app/updates/AIShortcut-VN-Setup-1.0.1.exe";
+  "https://downloadvn.aishortcut.info/updates/AIShortcut-VN-Setup-1.0.1.exe";
 
 function changeLanguage() {
   const lang = document.getElementById("langSelect").value;
